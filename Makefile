@@ -183,9 +183,13 @@ hello.exe: hello.obj hello2.obj
 	wlink NAME $^@ $(LFLAGS) FILE { $< }
 
 help: .SYMBOLIC
-	@echo 'Hello! Someday there will be help here.'
+	# Page 144, section 10.39.1 echo command
+	# The operating system shell "echo" command is intercepted by Make.
+	# https://open-watcom.github.io/open-watcom-v2-wikidocs/ctools.pdf
+	@echo Hello! Someday there will be help here.
 
 clean: .SYMBOLIC
-	@rm hello.exe
+	rm hello.exe
+	rm *.obj
 
 # vim:ft=make

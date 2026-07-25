@@ -3,4 +3,4 @@
 source ./env.sh
 
 # -h do not print program header
-wmake -h all
+wmake -h "$@"
