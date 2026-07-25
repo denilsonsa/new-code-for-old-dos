@@ -178,6 +178,7 @@ exvideo.exe: exvideo.obj
 #   ":" path of file name
 
 .c.obj:
+	rm -f $^*.err
 	$(CC) $(CFLAGS) -fo=$^@ $[@
 
 .obj.exe:
@@ -191,7 +192,7 @@ help: .SYMBOLIC
 	@echo Hello! Someday there will be help here.
 
 clean: .SYMBOLIC
-	rm hello.exe
-	rm *.obj
+	rm -f hello.exe
+	rm -f *.obj *.err
 
 # vim:ft=make

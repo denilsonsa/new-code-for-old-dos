@@ -5,13 +5,11 @@
 #include <graph.h>
 #include <i86.h>
 #include <stdio.h>
-#include <stdlib.h>
 
-main()
-{
+int main(int argc, char *argv[]){
     int mode;
     struct videoconfig vc;
-    char buf[ 80 ];
+    char buf[80];
 
 	puts("Hi");
 	delay(1000);
@@ -22,6 +20,7 @@ main()
 	// ERROR CPU:Illegal Unhandled Interrupt Called 5A
     _getvideoconfig( &vc );
 	puts("Got the video config");
+
     /* select "best" video mode */
     switch( vc.adapter ) {
     case _VGA :
@@ -52,7 +51,7 @@ main()
         break;
     default :
         puts( "No graphics adapter" );
-        exit( 1 );
+        return 1;
     }
 	delay(1000);
     if( _setvideomode( mode ) ) {
@@ -64,4 +63,5 @@ main()
         //getch();
         _setvideomode( _DEFAULTMODE );
     }
-} 
+	return 0;
+}
