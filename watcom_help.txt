@@ -1,0 +1,2764 @@
+/opt/watcom/binl64/wasaxp
+Open Watcom Alpha AXP Assembler Version 2.0 beta Jun  1 2026 05:36:16 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+/opt/watcom/binl64/wasaxp.sym
+/opt/watcom/binl64/wasm
+/opt/watcom/binl64/wasmps
+Open Watcom MIPS Assembler Version 2.0 beta Jun  1 2026 05:36:20 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+/opt/watcom/binl64/wasmps.sym
+/opt/watcom/binl64/wasm.sym
+/opt/watcom/binl64/wasppc
+Open Watcom PowerPC Assembler Version 2.0 beta Jun  1 2026 05:36:24 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+/opt/watcom/binl64/wasppc.sym
+/opt/watcom/binl64/watcom.so
+/opt/watcom/binl64/wbind
+Open Watcom Win386 Bind Utility
+Version 2.0 beta Jun  1 2026 05:35:33 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1991-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+
+Loading 32-bit Windows Supervisor "/opt/watcom/binw/win386.ext"
+Invoking the resource compiler...
+wrc ?
+/opt/watcom/binl64/wcc
+Open Watcom C x86 16-bit Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:40:10 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage: wcc [options] file [options]
+ 
+Options:
+-0              8086 instructions
+-1              186 instructions
+-2              286 instructions
+-3              386 instructions
+-4              386 instructions, optimize for 486
+-5              386 instructions, optimize for Pentium
+-6              386 instructions, optimize for Pentium Pro
+-?              print this message
+-aa             allow non const initializers for local aggregates or unions
+        Make Dependency Information
+-ad{[=<file>],bs,d[=<file>],fs,hp[=<file>],t[=<file>]} 
+  [=<file>]     - generate make style automatic dependency file
+  bs            - force path separators to '\' in auto-depend file
+  d[=<file>]    - specify first dependency in make style auto-depend file
+  fs            - force path separators to '/' in auto-depend file
+  hp[=<file>]   - specify default path for headers without one
+  t[=<file>]    - specify target in make style auto-depend file
+-ai             turn off type checking on static initialization
+-aq             turn off qualifier mismatch warning for const/volatile
+-b{c,d,g,m,w}   Application type
+  c             - build target is a console application
+  d             - build target is a dynamic link library (DLL)
+  g             - build target is a GUI application
+  m             - build target is a multi-thread environment
+  w             - build target is a default windowing application
+-bt[=<os>]      build target is operating system <os>
+        Debugging Information
+-d{0,1,1+,2,2~,3} 
+  0             - none
+  1             - only line numbers
+  1+            - only line numbers
+  2             - symbolic information
+  2~            - -d2 but without type names
+  3             - symbolic information with unreferenced type names
+-d<name>[=text] same as #define name [text] before compilation
+-d+             allow extended -d macro definitions
+-db             generate browsing information
+-e[=<num>]      set limit on number of error messages
+        Default calling convention
+-ec{c,d,f,p,r,s,w} 
+  c             - __cdecl
+  d             - __stdcall
+  f             - __fastcall
+  p             - __pascal
+  r             - __fortran
+  s             - __syscall
+  w             - __watcall (default)
+-ee             call epilogue hook routine
+-ef             use full path names in error messages
+-ei             force enum base type to use at least an int
+-em             force enum base type to use minimum integral type
+-en             emit routine names in the code segment
+-ep[=<num>]     call prologue hook routine with <num> stack bytes available
+-eq             do not display error messages (but still write to .err file)
+-fh[=<file>]    use pre-compiled header (PCH) file
+-fhq[=<file>]   do not display pre-compiled header activity warnings
+-fi=<file>      force <file> to be included
+-fip[=<file>]   automatic inclusion of <file> instead of _preincl.h (default)
+-fo[=<file>]    set object file name
+-fp{2,3,5,6}    Generate Floating-point code
+  2             - 80287 FPU code
+  3             - 80387 FPU code
+  5             - 80387 FPU code optimize for Pentium
+  6             - 80387 FPU code optimize for Pentium Pro
+-fpc            calls to floating-point library
+-fpd            enable Pentium FDIV bug check
+-fpi            inline 80x87 instructions with emulation
+-fpi87          inline 80x87 instructions
+-fpr            generate backward compatible 80x87 code
+-fr[=<file>]    set error file name
+-ft             check for truncated versions of file names
+-fti            print informational message when opening include file
+-fx             do not check for truncated versions of file names
+-g=<name>       set code group name
+-h{c,d,w}       Debugging Information format
+  c             - generate Codeview debugging information
+  d             - generate DWARF debugging information
+  w             - generate Watcom debugging information
+-i=<path>       add directory to list of include directories
+-j              change char default from unsigned to signed
+-m{c,h,l,m,s}   Memory model
+  c             - compact - small code/large data
+  h             - huge - large code/huge data
+  l             - large - large code/large data
+  m             - medium - large code/small data
+  s             - small - small code/small data (defaul)
+-nc=<name>      set code class name
+-nd=<name>      set data segment name
+-nm=<file>      set module name
+-nt=<name>      set name of text segment
+        Optimization
+-o{a,b,c,d,e[=<num>],f,f+,h,i,k,l,l+,m,n,o,p,r,s,t,u,x,z} 
+  a             - relax aliasing constraints
+  b             - enable branch prediction
+  c             - disable <call followed by return> to <jump> optimization
+  d             - disable all optimizations
+  e[=<num>]     - expand user functions inline (<num> controls max size)
+  f             - generate traceable stack frames as needed
+  f+            - always generate traceable stack frames
+  h             - enable expensive optimizations (longer compiles)
+  i             - expand intrinsic functions inline
+  k             - include prologue/epilogue in flow graph
+  l             - enable loop optimizations
+  l+            - enable loop unrolling optimizations
+  m             - generate inline code for math functions
+  n             - allow numerically unstable optimizations
+  o             - continue compilation if low on memory
+  p             - generate consistent floating-point results
+  r             - reorder instructions for best pipeline usage
+  s             - favor code size over execution time in optimizations
+  t             - favor execution time over code size in optimizations
+  u             - all functions must have unique addresses
+  x             - equivalent to -obmiler -s
+  z             - NULL points to valid memory in the target environment
+        Preprocess source file
+-p{,c,l,w=<num>} 
+                - preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output lines at <num> columns. Zero means no wrap.
+-pil            preprocessor ignores #line directives
+-pm             dump predefined macros to output
+-q              operate quietly (display only error messages)
+-r              save/restore segment registers across calls
+-ri             return chars and shorts as ints
+-s              remove stack overflow checks
+-sg             generate calls to grow the stack
+-st             touch stack through SS first
+-u[=<name>]     undefine macro name
+-v              output function declarations to .def file
+        Warning control
+-w{=<num>,cd=<id>,ce=<id>,e,o,x} 
+  =<num>        - set warning level number
+  cd=<id>       - disable warning message <id>
+  ce=<id>       - enable warning message <id>
+  e             - treat all warnings as errors
+  o             - warn about problems with overlaid code
+  x             - set warning level to maximum setting
+-x              ignore all ..INCLUDE environment variables
+-xx             ignore default directories for file search (.,../h,../c,...)
+-zA             disable all extensions (strict ISO/ANSI C)
+-za             disable extensions (i.e., accept only ISO/ANSI C)
+-zam            disable old non-ISO compliant names (macros, symbols)
+-zastd=<std>    use specified ISO/ANSI C language standard (c89,c99)
+-zc             place const data into the code segment
+-zdf            DS floats (i.e. not fixed to DGROUP)
+-zdp            DS is pegged to DGROUP
+-ze             enable extensions (i.e., near, far, export, etc.)
+-zev            enable arithmetic on void derived types
+-zff            FS floats (i.e. not fixed to a segment)
+-zfp            FS is pegged to a segment
+-zfw            generate FWAIT instructions on 386 and later
+-zg             generate function prototypes using base types
+-zgf            GS floats (i.e. not fixed to a segment)
+-zgp            GS is pegged to a segment
+        Multi-byte/Unicode character support
+-zk{0,0u,1,2,3,l,u=<num>,u8} 
+  0             - Japanese (Kanji, CP 932)
+  0u            - translate double-byte Kanji to Unicode
+  1             - Chinese/Taiwanese (Traditional, CP 950)
+  2             - Korean (Wansung, CP 949)
+  3             - Chinese (Simplified, CP 936)
+  l             - local installed language
+  u=<num>       - load Unicode translate table for specified code page
+  u8            - Unicode UTF-8
+-zl             remove default library information
+-zld            remove file dependency information
+-zlf            always generate default library information
+-zls            remove automatically inserted symbols
+-zm             emit functions in separate segments
+-zp=<num>       pack structure members with alignment {1,2,4,8,16}
+-zpw            output warning when padding is added in a class
+-zq             operate quietly (display only error messages)
+-zri            inline floating point rounding calls
+-zro            omit floating point rounding calls (non ANSI)
+-zs             syntax check only
+-zt[=<num>]     far data threshold (i.e., larger objects go in far memory)
+-zu             SS != DGROUP (i.e., do not assume stack is in data segment)
+-zW             more efficient Microsoft Windows entry sequences
+-zw             generate code for Microsoft Windows
+-zWs            generate code for Microsoft Windows with smart callbacks
+-zws            generate code for Microsoft Windows with smart callbacks
+/opt/watcom/binl64/wcc386
+Open Watcom C x86 32-bit Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:40:33 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage: wcc386 [options] file [options]
+ 
+Options:
+-3r             386 register calling conventions
+-3s             386 stack calling conventions
+-4r             486 register calling conventions
+-4s             486 stack calling conventions
+-5r             Pentium register calling conventions
+-5s             Pentium stack calling conventions
+-6r             Pentium Pro register calling conventions
+-6s             Pentium Pro stack calling conventions
+-?              print this message
+-aa             allow non const initializers for local aggregates or unions
+        Make Dependency Information
+-ad{[=<file>],bs,d[=<file>],fs,hp[=<file>],t[=<file>]} 
+  [=<file>]     - generate make style automatic dependency file
+  bs            - force path separators to '\' in auto-depend file
+  d[=<file>]    - specify first dependency in make style auto-depend file
+  fs            - force path separators to '/' in auto-depend file
+  hp[=<file>]   - specify default path for headers without one
+  t[=<file>]    - specify target in make style auto-depend file
+-ai             turn off type checking on static initialization
+-aq             turn off qualifier mismatch warning for const/volatile
+-b{c,d,g,m,r,w} Application type
+  c             - build target is a console application
+  d             - build target is a dynamic link library (DLL)
+  g             - build target is a GUI application
+  m             - build target is a multi-thread environment
+  r             - build target uses DLL version of C/C++ run-time library
+  w             - build target is a default windowing application
+-bt[=<os>]      build target is operating system <os>
+        Debugging Information
+-d{0,1,1+,2,2~,3} 
+  0             - none
+  1             - only line numbers
+  1+            - only line numbers
+  2             - symbolic information
+  2~            - -d2 but without type names
+  3             - symbolic information with unreferenced type names
+-d<name>[=text] same as #define name [text] before compilation
+-d+             allow extended -d macro definitions
+-db             generate browsing information
+-e[=<num>]      set limit on number of error messages
+        Default calling convention
+-ec{c,d,f,p,r,s,w} 
+  c             - __cdecl
+  d             - __stdcall
+  f             - __fastcall
+  p             - __pascal
+  r             - __fortran
+  s             - __syscall
+  w             - __watcall (default)
+-ee             call epilogue hook routine
+-ef             use full path names in error messages
+-ei             force enum base type to use at least an int
+-em             force enum base type to use minimum integral type
+-en             emit routine names in the code segment
+-ep[=<num>]     call prologue hook routine with <num> stack bytes available
+-eq             do not display error messages (but still write to .err file)
+-et             emit Pentium profiling code
+-et0            emit Pentium-CTR0 profiling code
+-ez             generate PharLap EZ-OMF object files
+-fh[=<file>]    use pre-compiled header (PCH) file
+-fhq[=<file>]   do not display pre-compiled header activity warnings
+-fi=<file>      force <file> to be included
+-fip[=<file>]   automatic inclusion of <file> instead of _preincl.h (default)
+-fo[=<file>]    set object file name
+-fp{2,3,5,6}    Generate Floating-point code
+  2             - 80287 FPU code
+  3             - 80387 FPU code
+  5             - 80387 FPU code optimize for Pentium
+  6             - 80387 FPU code optimize for Pentium Pro
+-fpc            calls to floating-point library
+-fpd            enable Pentium FDIV bug check
+-fpi            inline 80x87 instructions with emulation
+-fpi87          inline 80x87 instructions
+-fpr            generate backward compatible 80x87 code
+-fr[=<file>]    set error file name
+-ft             check for truncated versions of file names
+-fti            print informational message when opening include file
+-fx             do not check for truncated versions of file names
+-g=<name>       set code group name
+-h{c,d,w}       Debugging Information format
+  c             - generate Codeview debugging information
+  d             - generate DWARF debugging information
+  w             - generate Watcom debugging information
+-i=<path>       add directory to list of include directories
+-j              change char default from unsigned to signed
+-m{c,f,l,m,s}   Memory model
+  c             - compact - small code/large data
+  f             - flat - small code/small data assuming CS=DS=SS=ES
+  l             - large - large code/large data
+  m             - medium - large code/small data
+  s             - small - small code/small data (defaul)
+-nc=<name>      set code class name
+-nd=<name>      set data segment name
+-nm=<file>      set module name
+-nt=<name>      set name of text segment
+        Optimization
+-o{a,b,c,d,e[=<num>],f,f+,h,i,k,l,l+,m,n,o,p,r,s,t,u,x,z} 
+  a             - relax aliasing constraints
+  b             - enable branch prediction
+  c             - disable <call followed by return> to <jump> optimization
+  d             - disable all optimizations
+  e[=<num>]     - expand user functions inline (<num> controls max size)
+  f             - generate traceable stack frames as needed
+  f+            - always generate traceable stack frames
+  h             - enable expensive optimizations (longer compiles)
+  i             - expand intrinsic functions inline
+  k             - include prologue/epilogue in flow graph
+  l             - enable loop optimizations
+  l+            - enable loop unrolling optimizations
+  m             - generate inline code for math functions
+  n             - allow numerically unstable optimizations
+  o             - continue compilation if low on memory
+  p             - generate consistent floating-point results
+  r             - reorder instructions for best pipeline usage
+  s             - favor code size over execution time in optimizations
+  t             - favor execution time over code size in optimizations
+  u             - all functions must have unique addresses
+  x             - equivalent to -obmiler -s
+  z             - NULL points to valid memory in the target environment
+        Preprocess source file
+-p{,c,l,w=<num>} 
+                - preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output lines at <num> columns. Zero means no wrap.
+-pil            preprocessor ignores #line directives
+-pm             dump predefined macros to output
+-q              operate quietly (display only error messages)
+-r              save/restore segment registers across calls
+-ri             return chars and shorts as ints
+-s              remove stack overflow checks
+-sg             generate calls to grow the stack
+-st             touch stack through SS first
+-u[=<name>]     undefine macro name
+-v              output function declarations to .def file
+-vcap           VC++ compatibility: alloca allowed in argument lists
+        Warning control
+-w{=<num>,cd=<id>,ce=<id>,e,x} 
+  =<num>        - set warning level number
+  cd=<id>       - disable warning message <id>
+  ce=<id>       - enable warning message <id>
+  e             - treat all warnings as errors
+  x             - set warning level to maximum setting
+-x              ignore all ..INCLUDE environment variables
+-xx             ignore default directories for file search (.,../h,../c,...)
+-zA             disable all extensions (strict ISO/ANSI C)
+-za             disable extensions (i.e., accept only ISO/ANSI C)
+-zam            disable old non-ISO compliant names (macros, symbols)
+-zastd=<std>    use specified ISO/ANSI C language standard (c89,c99)
+-zc             place const data into the code segment
+-zdf            DS floats (i.e. not fixed to DGROUP)
+-zdl            load DS directly from DGROUP
+-zdp            DS is pegged to DGROUP
+-ze             enable extensions (i.e., near, far, export, etc.)
+-zev            enable arithmetic on void derived types
+-zff            FS floats (i.e. not fixed to a segment)
+-zfp            FS is pegged to a segment
+-zfw            generate FWAIT instructions
+-zg             generate function prototypes using base types
+-zgf            GS floats (i.e. not fixed to a segment)
+-zgp            GS is pegged to a segment
+        Multi-byte/Unicode character support
+-zk{0,0u,1,2,3,l,u=<num>,u8} 
+  0             - Japanese (Kanji, CP 932)
+  0u            - translate double-byte Kanji to Unicode
+  1             - Chinese/Taiwanese (Traditional, CP 950)
+  2             - Korean (Wansung, CP 949)
+  3             - Chinese (Simplified, CP 936)
+  l             - local installed language
+  u=<num>       - load Unicode translate table for specified code page
+  u8            - Unicode UTF-8
+-zl             remove default library information
+-zld            remove file dependency information
+-zlf            always generate default library information
+-zls            remove automatically inserted symbols
+-zm             emit functions in separate segments
+-zp=<num>       pack structure members with alignment {1,2,4,8,16}
+-zpw            output warning when padding is added in a class
+-zq             operate quietly (display only error messages)
+-zri            inline floating point rounding calls
+-zro            omit floating point rounding calls (non ANSI)
+-zs             syntax check only
+-zt[=<num>]     far data threshold (i.e., larger objects go in far memory)
+-zu             SS != DGROUP (i.e., do not assume stack is in data segment)
+-zw             generate code for Microsoft Windows
+-zz             remove "@size" from __stdcall names (10.0 compatible)
+/opt/watcom/binl64/wcc38601.int
+/opt/watcom/binl64/wcc386.sym
+/opt/watcom/binl64/wccaxp
+Open Watcom C Alpha AXP Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:40:56 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage: wccaxp [options] file [options]
+ 
+Options:
+-?              print this message
+-aa             allow non const initializers for local aggregates or unions
+        Make Dependency Information
+-ad{[=<file>],bs,d[=<file>],fs,hp[=<file>],t[=<file>]} 
+  [=<file>]     - generate make style automatic dependency file
+  bs            - force path separators to '\' in auto-depend file
+  d[=<file>]    - specify first dependency in make style auto-depend file
+  fs            - force path separators to '/' in auto-depend file
+  hp[=<file>]   - specify default path for headers without one
+  t[=<file>]    - specify target in make style auto-depend file
+-ai             turn off type checking on static initialization
+-aq             turn off qualifier mismatch warning for const/volatile
+-as             assume short integers are aligned
+-b{c,d,g,m,r,w} Application type
+  c             - build target is a console application
+  d             - build target is a dynamic link library (DLL)
+  g             - build target is a GUI application
+  m             - build target is a multi-thread environment
+  r             - build target uses DLL version of C/C++ run-time library
+  w             - build target is a default windowing application
+-bt[=<os>]      build target is operating system <os>
+        Debugging Information
+-d{0,1,1+,2,2~,3} 
+  0             - none
+  1             - only line numbers
+  1+            - only line numbers
+  2             - symbolic information
+  2~            - -d2 but without type names
+  3             - symbolic information with unreferenced type names
+-d<name>[=text] same as #define name [text] before compilation
+-d+             allow extended -d macro definitions
+-db             generate browsing information
+-e[=<num>]      set limit on number of error messages
+-eb             emit big-endian object files
+-ef             use full path names in error messages
+-ei             force enum base type to use at least an int
+-el             emit little-endian object files
+-em             force enum base type to use minimum integral type
+-en             emit routine names in the code segment
+-eoc            emit COFF object files
+-eoe            emit ELF object files
+-ep[=<num>]     call prologue hook routine with <num> stack bytes available
+-eq             do not display error messages (but still write to .err file)
+-fh[=<file>]    use pre-compiled header (PCH) file
+-fhq[=<file>]   do not display pre-compiled header activity warnings
+-fi=<file>      force <file> to be included
+-fip[=<file>]   automatic inclusion of <file> instead of _preincl.h (default)
+-fo[=<file>]    set object file name
+-fr[=<file>]    set error file name
+-ft             check for truncated versions of file names
+-fti            print informational message when opening include file
+-fx             do not check for truncated versions of file names
+-h{c,d}         Debugging Information format
+  c             - generate Codeview debugging information
+  d             - generate DWARF debugging information
+-i=<path>       add directory to list of include directories
+-j              change char default from unsigned to signed
+-nm=<file>      set module name
+        Optimization
+-o{a,b,d,e[=<num>],h,i,k,l,l+,n,o,p,r,s,t,u,x,z} 
+  a             - relax aliasing constraints
+  b             - enable branch prediction
+  d             - disable all optimizations
+  e[=<num>]     - expand user functions inline (<num> controls max size)
+  h             - enable expensive optimizations (longer compiles)
+  i             - expand intrinsic functions inline
+  k             - include prologue/epilogue in flow graph
+  l             - enable loop optimizations
+  l+            - enable loop unrolling optimizations
+  n             - allow numerically unstable optimizations
+  o             - continue compilation if low on memory
+  p             - generate consistent floating-point results
+  r             - reorder instructions for best pipeline usage
+  s             - favor code size over execution time in optimizations
+  t             - favor execution time over code size in optimizations
+  u             - all functions must have unique addresses
+  x             - equivalent to -obiler -s
+  z             - NULL points to valid memory in the target environment
+        Preprocess source file
+-p{,c,l,w=<num>} 
+                - preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output lines at <num> columns. Zero means no wrap.
+-pil            preprocessor ignores #line directives
+-pm             dump predefined macros to output
+-q              operate quietly (display only error messages)
+-s              remove stack overflow checks
+-si             generate calls to initialize local storage
+-u[=<name>]     undefine macro name
+-v              output function declarations to .def file
+-vcap           VC++ compatibility: alloca allowed in argument lists
+        Warning control
+-w{=<num>,cd=<id>,ce=<id>,e,x} 
+  =<num>        - set warning level number
+  cd=<id>       - disable warning message <id>
+  ce=<id>       - enable warning message <id>
+  e             - treat all warnings as errors
+  x             - set warning level to maximum setting
+-x              ignore all ..INCLUDE environment variables
+-xx             ignore default directories for file search (.,../h,../c,...)
+-zA             disable all extensions (strict ISO/ANSI C)
+-za             disable extensions (i.e., accept only ISO/ANSI C)
+-zam            disable old non-ISO compliant names (macros, symbols)
+-zastd=<std>    use specified ISO/ANSI C language standard (c89,c99)
+-ze             enable extensions (i.e., near, far, export, etc.)
+-zev            enable arithmetic on void derived types
+-zg             generate function prototypes using base types
+        Multi-byte/Unicode character support
+-zk{0,0u,1,2,3,l,u=<num>,u8} 
+  0             - Japanese (Kanji, CP 932)
+  0u            - translate double-byte Kanji to Unicode
+  1             - Chinese/Taiwanese (Traditional, CP 950)
+  2             - Korean (Wansung, CP 949)
+  3             - Chinese (Simplified, CP 936)
+  l             - local installed language
+  u=<num>       - load Unicode translate table for specified code page
+  u8            - Unicode UTF-8
+-zl             remove default library information
+-zld            remove file dependency information
+-zlf            always generate default library information
+-zls            remove automatically inserted symbols
+-zm             emit functions in separate segments
+-zp=<num>       pack structure members with alignment {1,2,4,8,16}
+-zps            always align structs on qword boundaries
+-zpw            output warning when padding is added in a class
+-zq             operate quietly (display only error messages)
+-zs             syntax check only
+/opt/watcom/binl64/wccaxp01.int
+/opt/watcom/binl64/wccaxp.sym
+/opt/watcom/binl64/wcci8601.int
+/opt/watcom/binl64/wccmps
+Open Watcom C MIPS Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:41:20 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage: wccmps [options] file [options]
+ 
+Options:
+-?              print this message
+-aa             allow non const initializers for local aggregates or unions
+        Make Dependency Information
+-ad{[=<file>],bs,d[=<file>],fs,hp[=<file>],t[=<file>]} 
+  [=<file>]     - generate make style automatic dependency file
+  bs            - force path separators to '\' in auto-depend file
+  d[=<file>]    - specify first dependency in make style auto-depend file
+  fs            - force path separators to '/' in auto-depend file
+  hp[=<file>]   - specify default path for headers without one
+  t[=<file>]    - specify target in make style auto-depend file
+-ai             turn off type checking on static initialization
+-aq             turn off qualifier mismatch warning for const/volatile
+-b{c,d,g,m,r,w} Application type
+  c             - build target is a console application
+  d             - build target is a dynamic link library (DLL)
+  g             - build target is a GUI application
+  m             - build target is a multi-thread environment
+  r             - build target uses DLL version of C/C++ run-time library
+  w             - build target is a default windowing application
+-bt[=<os>]      build target is operating system <os>
+        Debugging Information
+-d{0,1,1+,2,2~,3} 
+  0             - none
+  1             - only line numbers
+  1+            - only line numbers
+  2             - symbolic information
+  2~            - -d2 but without type names
+  3             - symbolic information with unreferenced type names
+-d<name>[=text] same as #define name [text] before compilation
+-d+             allow extended -d macro definitions
+-db             generate browsing information
+-e[=<num>]      set limit on number of error messages
+-eb             emit big-endian object files
+-ef             use full path names in error messages
+-ei             force enum base type to use at least an int
+-el             emit little-endian object files
+-em             force enum base type to use minimum integral type
+-en             emit routine names in the code segment
+-eoc            emit COFF object files
+-eoe            emit ELF object files
+-ep[=<num>]     call prologue hook routine with <num> stack bytes available
+-eq             do not display error messages (but still write to .err file)
+-fh[=<file>]    use pre-compiled header (PCH) file
+-fhq[=<file>]   do not display pre-compiled header activity warnings
+-fi=<file>      force <file> to be included
+-fip[=<file>]   automatic inclusion of <file> instead of _preincl.h (default)
+-fo[=<file>]    set object file name
+-fr[=<file>]    set error file name
+-ft             check for truncated versions of file names
+-fti            print informational message when opening include file
+-fx             do not check for truncated versions of file names
+-h{c,d}         Debugging Information format
+  c             - generate Codeview debugging information
+  d             - generate DWARF debugging information
+-i=<path>       add directory to list of include directories
+-j              change char default from unsigned to signed
+-nm=<file>      set module name
+        Optimization
+-o{a,b,d,e[=<num>],h,i,k,l,l+,n,o,p,r,s,t,u,x,z} 
+  a             - relax aliasing constraints
+  b             - enable branch prediction
+  d             - disable all optimizations
+  e[=<num>]     - expand user functions inline (<num> controls max size)
+  h             - enable expensive optimizations (longer compiles)
+  i             - expand intrinsic functions inline
+  k             - include prologue/epilogue in flow graph
+  l             - enable loop optimizations
+  l+            - enable loop unrolling optimizations
+  n             - allow numerically unstable optimizations
+  o             - continue compilation if low on memory
+  p             - generate consistent floating-point results
+  r             - reorder instructions for best pipeline usage
+  s             - favor code size over execution time in optimizations
+  t             - favor execution time over code size in optimizations
+  u             - all functions must have unique addresses
+  x             - equivalent to -obiler -s
+  z             - NULL points to valid memory in the target environment
+        Preprocess source file
+-p{,c,l,w=<num>} 
+                - preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output lines at <num> columns. Zero means no wrap.
+-pil            preprocessor ignores #line directives
+-pm             dump predefined macros to output
+-q              operate quietly (display only error messages)
+-s              remove stack overflow checks
+-u[=<name>]     undefine macro name
+-v              output function declarations to .def file
+        Warning control
+-w{=<num>,cd=<id>,ce=<id>,e,x} 
+  =<num>        - set warning level number
+  cd=<id>       - disable warning message <id>
+  ce=<id>       - enable warning message <id>
+  e             - treat all warnings as errors
+  x             - set warning level to maximum setting
+-x              ignore all ..INCLUDE environment variables
+-xx             ignore default directories for file search (.,../h,../c,...)
+-zA             disable all extensions (strict ISO/ANSI C)
+-za             disable extensions (i.e., accept only ISO/ANSI C)
+-zam            disable old non-ISO compliant names (macros, symbols)
+-zastd=<std>    use specified ISO/ANSI C language standard (c89,c99)
+-ze             enable extensions (i.e., near, far, export, etc.)
+-zev            enable arithmetic on void derived types
+-zg             generate function prototypes using base types
+        Multi-byte/Unicode character support
+-zk{0,0u,1,2,3,l,u=<num>,u8} 
+  0             - Japanese (Kanji, CP 932)
+  0u            - translate double-byte Kanji to Unicode
+  1             - Chinese/Taiwanese (Traditional, CP 950)
+  2             - Korean (Wansung, CP 949)
+  3             - Chinese (Simplified, CP 936)
+  l             - local installed language
+  u=<num>       - load Unicode translate table for specified code page
+  u8            - Unicode UTF-8
+-zl             remove default library information
+-zld            remove file dependency information
+-zlf            always generate default library information
+-zls            remove automatically inserted symbols
+-zm             emit functions in separate segments
+-zp=<num>       pack structure members with alignment {1,2,4,8,16}
+-zpw            output warning when padding is added in a class
+-zq             operate quietly (display only error messages)
+-zs             syntax check only
+/opt/watcom/binl64/wccmps01.int
+/opt/watcom/binl64/wccmps.sym
+/opt/watcom/binl64/wccppc
+Open Watcom C PowerPC Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:41:45 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage: wccppc [options] file [options]
+ 
+Options:
+-?              print this message
+-aa             allow non const initializers for local aggregates or unions
+        Make Dependency Information
+-ad{[=<file>],bs,d[=<file>],fs,hp[=<file>],t[=<file>]} 
+  [=<file>]     - generate make style automatic dependency file
+  bs            - force path separators to '\' in auto-depend file
+  d[=<file>]    - specify first dependency in make style auto-depend file
+  fs            - force path separators to '/' in auto-depend file
+  hp[=<file>]   - specify default path for headers without one
+  t[=<file>]    - specify target in make style auto-depend file
+-ai             turn off type checking on static initialization
+-aq             turn off qualifier mismatch warning for const/volatile
+-b{c,d,g,m,r,w} Application type
+  c             - build target is a console application
+  d             - build target is a dynamic link library (DLL)
+  g             - build target is a GUI application
+  m             - build target is a multi-thread environment
+  r             - build target uses DLL version of C/C++ run-time library
+  w             - build target is a default windowing application
+-bt[=<os>]      build target is operating system <os>
+        Debugging Information
+-d{0,1,1+,2,2~,3} 
+  0             - none
+  1             - only line numbers
+  1+            - only line numbers
+  2             - symbolic information
+  2~            - -d2 but without type names
+  3             - symbolic information with unreferenced type names
+-d<name>[=text] same as #define name [text] before compilation
+-d+             allow extended -d macro definitions
+-db             generate browsing information
+-e[=<num>]      set limit on number of error messages
+-eb             emit big-endian object files
+-ef             use full path names in error messages
+-ei             force enum base type to use at least an int
+-el             emit little-endian object files
+-em             force enum base type to use minimum integral type
+-en             emit routine names in the code segment
+-eoc            emit COFF object files
+-eoe            emit ELF object files
+-ep[=<num>]     call prologue hook routine with <num> stack bytes available
+-eq             do not display error messages (but still write to .err file)
+-fh[=<file>]    use pre-compiled header (PCH) file
+-fhq[=<file>]   do not display pre-compiled header activity warnings
+-fi=<file>      force <file> to be included
+-fip[=<file>]   automatic inclusion of <file> instead of _preincl.h (default)
+-fo[=<file>]    set object file name
+-fr[=<file>]    set error file name
+-ft             check for truncated versions of file names
+-fti            print informational message when opening include file
+-fx             do not check for truncated versions of file names
+-h{c,d}         Debugging Information format
+  c             - generate Codeview debugging information
+  d             - generate DWARF debugging information
+-i=<path>       add directory to list of include directories
+-j              change char default from unsigned to signed
+-nm=<file>      set module name
+        Optimization
+-o{a,b,d,e[=<num>],h,i,k,l,l+,n,o,p,r,s,t,u,x,z} 
+  a             - relax aliasing constraints
+  b             - enable branch prediction
+  d             - disable all optimizations
+  e[=<num>]     - expand user functions inline (<num> controls max size)
+  h             - enable expensive optimizations (longer compiles)
+  i             - expand intrinsic functions inline
+  k             - include prologue/epilogue in flow graph
+  l             - enable loop optimizations
+  l+            - enable loop unrolling optimizations
+  n             - allow numerically unstable optimizations
+  o             - continue compilation if low on memory
+  p             - generate consistent floating-point results
+  r             - reorder instructions for best pipeline usage
+  s             - favor code size over execution time in optimizations
+  t             - favor execution time over code size in optimizations
+  u             - all functions must have unique addresses
+  x             - equivalent to -obiler -s
+  z             - NULL points to valid memory in the target environment
+        Preprocess source file
+-p{,c,l,w=<num>} 
+                - preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output lines at <num> columns. Zero means no wrap.
+-pil            preprocessor ignores #line directives
+-pm             dump predefined macros to output
+-q              operate quietly (display only error messages)
+-s              remove stack overflow checks
+-u[=<name>]     undefine macro name
+-v              output function declarations to .def file
+        Warning control
+-w{=<num>,cd=<id>,ce=<id>,e,x} 
+  =<num>        - set warning level number
+  cd=<id>       - disable warning message <id>
+  ce=<id>       - enable warning message <id>
+  e             - treat all warnings as errors
+  x             - set warning level to maximum setting
+-x              ignore all ..INCLUDE environment variables
+-xx             ignore default directories for file search (.,../h,../c,...)
+-zA             disable all extensions (strict ISO/ANSI C)
+-za             disable extensions (i.e., accept only ISO/ANSI C)
+-zam            disable old non-ISO compliant names (macros, symbols)
+-zastd=<std>    use specified ISO/ANSI C language standard (c89,c99)
+-ze             enable extensions (i.e., near, far, export, etc.)
+-zev            enable arithmetic on void derived types
+-zg             generate function prototypes using base types
+        Multi-byte/Unicode character support
+-zk{0,0u,1,2,3,l,u=<num>,u8} 
+  0             - Japanese (Kanji, CP 932)
+  0u            - translate double-byte Kanji to Unicode
+  1             - Chinese/Taiwanese (Traditional, CP 950)
+  2             - Korean (Wansung, CP 949)
+  3             - Chinese (Simplified, CP 936)
+  l             - local installed language
+  u=<num>       - load Unicode translate table for specified code page
+  u8            - Unicode UTF-8
+-zl             remove default library information
+-zld            remove file dependency information
+-zlf            always generate default library information
+-zls            remove automatically inserted symbols
+-zm             emit functions in separate segments
+-zp=<num>       pack structure members with alignment {1,2,4,8,16}
+-zpw            output warning when padding is added in a class
+-zq             operate quietly (display only error messages)
+-zs             syntax check only
+/opt/watcom/binl64/wccppc01.int
+/opt/watcom/binl64/wccppc.sym
+/opt/watcom/binl64/wcc.sym
+/opt/watcom/binl64/wcl
+Open Watcom C/C++ x86 16-bit Compile and Link Utility
+Version 2.0 beta Jun  1 2026 05:47:06 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1988-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage:  wcl [options] file(s)
+ 
+Options:
+-c    compile only, no link
+-cc   treat source files as C code
+-cc++ treat source files as C++ code
+-y    ignore the WCL environment variable
+        [Processor options]
+-0 generate code for 8086 or higher
+-1 generate code for 186 or higher
+-2 generate code for 286 or higher
+-3 generate code for 386 or higher
+-4 generate code optimized for 486
+-5 generate code optimized for Pentium
+-6 generate code opt. for Pentium Pro
+        [Floating-point processor options]
+-fp2   generate 287 floating-point code
+-fp3   generate 387 floating-point code
+-fp5   optimize f-p for Pentium
+-fp6   optimize f-p for Pentium Pro
+-fpc   calls to floating-point library
+-fpd   enable Pentium FDIV check
+-fpi   inline 80x87 with emulation
+-fpi87 inline 80x87
+-fpr   use old floating-point conventions
+        [Compiler options]
+-bcl=<os>         compile and link for <os>
+-bt=<os>          compile for target <os>
+-db               generate browsing information
+-e=<num>          set error limit number <num>
+-ecc              set calling conv. to __cdecl
+-ecd              set calling conv. to __stdcall
+-ecf              set calling conv. to __fastcall
+-ecp              set calling conv. to __pascal
+-ecr              set calling conv. to __fortran
+-ecs              set calling conv. to __syscall
+-ecw              set calling conv. to __watcall
+-ee               call epilogue hook routine
+-ef               full paths in messages
+-ei               force enums to be type int
+-em               minimum base type for enum is int
+-en               emit routine names in the code
+-ep[=<num>]       call prologue hook routine <num>
+-eq               do not display error messages
+-fh=<file>        pre-compiled headers
+-fhq[=<file>]     -fh without warnings
+-fhr              (C++) only read PCH
+-fhw              (C++) only write PCH
+-fhwe             (C++) don't count PCH warnings
+-fi=<file>        force include of file
+-fo=<file>        set object file name
+-fr=<file>        set error file name
+-ft               (C++) check for 8.3 file names
+-fx               (C++) no check for 8.3 file names
+-g=<name>         set code group name
+-hc               codeview debug format
+-hd               dwarf debug format
+-hw               watcom debug format
+-j                change char default to signed
+-m{t,s,m,c,l,h}   memory model
+-nc=<name>        set CODE class name
+-nd=<name>        set data segment name
+-nm=<name>        set module name
+-nt=<name>        set text segment name
+-q                operate quietly
+-r                save/restore segregs across calls
+-ri               promote function args/rets to int
+-s                remove stack overflow checks
+-sg               generate calls to grow the stack
+-st               touch stack through SS first
+-v                output func declarations to .def
+-vcap             VC++ compat: alloca in arg lists
+-w=<num>          set warning level number <num>
+-wcd=<num>        disable warning message <num>
+-wce=<num>        enable warning message <num>
+-we               treat all warnings as errors
+-wo               diagnose problems in overlaid code
+-wx               set warning level to max
+-x                preprocessor ignores env.variables
+-xr               (C++) enable RTTI
+-zc               place strings in CODE segment
+-zd{f,p}          DS floats vs DS pegged to DGROUP
+-zf{f,p}          FS floats vs FS pegged to seg
+-zg               function prototype using base type
+-zg{f,p}          GS floats vs GS pegged to seg
+-zku=<codepage>   UNICODE support
+-zk{0,0u,1,2,3,l} double-byte support
+-zl               remove default library information
+-zld              remove file dependency information
+-zm               place functions in separate segments
+-zmf              (C++) -zm with near calls allowed
+-zp=<num>         struct packing align {1,2,4,8,16}
+-zpw              warning when padding a struct
+-zq               operate quietly
+-zs               check syntax only
+-zt=<num>         set data threshold to <num>
+-zu               SS != DGROUP
+-zv               (C++) enable virt. fun. removal opt
+-zW               -zw with efficient entry sequences
+-zWs              -zW with smart callbacks
+-zws              -zw with smart callbacks
+-z{a,e}           disable/enable extensions
+        [Debugging options]
+-d0  no debugging information
+-d1  line number debugging info
+-d1+ (C) line number and types debugging info
+-d2  full symbolic debugging info
+-d2i (C++) -d2 and inlines as COMDATs
+-d2s (C++) -d2 and inlines as statics
+-d2t (C++) -d2 but without type names
+-d3  debug info with unref'd type names
+-d3i (C++) -d3 and inlines as COMDATs
+-d3s (C++) -d3 and inlines as statics
+        [Optimization options]
+-oa         relax alias checking
+-ob         branch prediction
+-oc         disable call/ret optimization
+-od         disable optimizations
+-oe[=<num>] expand functions inline (<num> max size)
+-of[+]      generate traceable stack frames
+-oh         enable repeated optimizations
+-oi         inline intrinsic functions
+-oi+        (C++) -oi with max inlining depth
+-ok         control flow entry/exit seq.
+-ol         perform loop optimizations
+-ol+        -ol with loop unrolling
+-om         generate inline math functions
+-on         numerically unstable floating-point
+-oo         continue compile when low on memory
+-op         improve floating-point consistency
+-or         re-order instructions to avoid stalls
+-os         optimize for space
+-ot         optimize for time
+-ou         ensure unique addresses for functions
+-ox         maximum optimization (-obmiler -s)
+        [C++ exception handling options]
+-xd  no exception handling
+-xds no exception handling: space
+-xdt no exception handling
+-xs  exception handling: balanced
+-xss exception handling: space
+-xst exception handling: time
+        [Preprocessor options]
+-d+             extend syntax of -d option
+-d<name>[=text] define a macro
+-fo=<file>      set object file name
+-i=<path>       include directory
+-p{c,l,w=<num>} Preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output at column <num>
+-pil            ignore #line directives
+-t=<num>        (C++) <num> of spaces in tab stop
+-tp=<name>      (C) set #pragma on( <name> )
+-u<name>        undefine macro name
+        [Linker options]
+-"linker_directives" additional linker directives
+-@=<file>            additional directive file
+-bcl=<os>            compile and link for <os>
+-bd                  build Dynamic link library
+-bm                  build Multi-thread application
+-br                  build with dll run-time library
+-bw                  build default Windowing app.
+-fd[=<file>]         write directives
+-fe=<file>           name executable file
+-fm[=<file>]         generate map file
+-k<stack_size>       set stack size
+-l=<target>          link for the specified <target>
+-lp                  create an OS/2 protected-mode pgm
+-lr                  create a DOS real-mode program
+/opt/watcom/binl64/wcl386
+Open Watcom C/C++ x86 32-bit Compile and Link Utility
+Version 2.0 beta Jun  1 2026 05:47:06 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1988-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage:  wcl386 [options] file(s)
+ 
+Options:
+-c    compile only, no link
+-cc   treat source files as C code
+-cc++ treat source files as C++ code
+-y    ignore the WCL386 environment variable
+        [Processor options]
+-3r 386 register calling conventions
+-3s 386 stack calling conventions
+-4r 486 register calling conventions
+-4s 486 stack calling conventions
+-5r Pentium register calling conv.
+-5s Pentium stack calling conventions
+-6r Pentium Pro register call conven.
+-6s Pentium Pro stack call conven.
+        [Floating-point processor options]
+-fp2   generate 287 floating-point code
+-fp3   generate 387 floating-point code
+-fp5   optimize f-p for Pentium
+-fp6   optimize f-p for Pentium Pro
+-fpc   calls to floating-point library
+-fpd   enable Pentium FDIV check
+-fpi   inline 80x87 with emulation
+-fpi87 inline 80x87
+-fpr   use old floating-point conventions
+        [Compiler options]
+-bcl=<os>         compile and link for <os>
+-bt=<os>          compile for target <os>
+-db               generate browsing information
+-e=<num>          set error limit number <num>
+-ecc              set calling conv. to __cdecl
+-ecd              set calling conv. to __stdcall
+-ecf              set calling conv. to __fastcall
+-ecp              set calling conv. to __pascal
+-ecr              set calling conv. to __fortran
+-ecs              set calling conv. to __syscall
+-ecw              set calling conv. to __watcall
+-ee               call epilogue hook routine
+-ef               full paths in messages
+-ei               force enums to be type int
+-em               minimum base type for enum is int
+-en               emit routine names in the code
+-ep[=<num>]       call prologue hook routine <num>
+-eq               do not display error messages
+-et               P5 profiling
+-ez               generate PharLap EZ-OMF object
+-fh=<file>        pre-compiled headers
+-fhq[=<file>]     -fh without warnings
+-fhr              (C++) only read PCH
+-fhw              (C++) only write PCH
+-fhwe             (C++) don't count PCH warnings
+-fi=<file>        force include of file
+-fo=<file>        set object file name
+-fr=<file>        set error file name
+-ft               (C++) check for 8.3 file names
+-fx               (C++) no check for 8.3 file names
+-g=<name>         set code group name
+-hc               codeview debug format
+-hd               dwarf debug format
+-hw               watcom debug format
+-j                change char default to signed
+-m{f,s,m,c,l}     memory model
+-nc=<name>        set CODE class name
+-nd=<name>        set data segment name
+-nm=<name>        set module name
+-nt=<name>        set text segment name
+-q                operate quietly
+-r                save/restore segregs across calls
+-ri               promote function args/rets to int
+-s                remove stack overflow checks
+-sg               generate calls to grow the stack
+-st               touch stack through SS first
+-v                output func declarations to .def
+-vcap             VC++ compat: alloca in arg lists
+-w=<num>          set warning level number <num>
+-wcd=<num>        disable warning message <num>
+-wce=<num>        enable warning message <num>
+-we               treat all warnings as errors
+-wx               set warning level to max
+-x                preprocessor ignores env.variables
+-xr               (C++) enable RTTI
+-zc               place strings in CODE segment
+-zdl              load DS directly from DGROUP
+-zd{f,p}          DS floats vs DS pegged to DGROUP
+-zf{f,p}          FS floats vs FS pegged to seg
+-zg               function prototype using base type
+-zg{f,p}          GS floats vs GS pegged to seg
+-zku=<codepage>   UNICODE support
+-zk{0,0u,1,2,3,l} double-byte support
+-zl               remove default library information
+-zld              remove file dependency information
+-zm               place functions in separate segments
+-zmf              (C++) -zm with near calls allowed
+-zp=<num>         struct packing align {1,2,4,8,16}
+-zpw              warning when padding a struct
+-zq               operate quietly
+-zs               check syntax only
+-zt=<num>         set data threshold to <num>
+-zu               SS != DGROUP
+-zv               (C++) enable virt. fun. removal opt
+-zw               generate code for MS Windows
+-zz               remove @size from __stdcall func.
+-z{a,e}           disable/enable extensions
+        [Debugging options]
+-d0  no debugging information
+-d1  line number debugging info
+-d1+ (C) line number and types debugging info
+-d2  full symbolic debugging info
+-d2i (C++) -d2 and inlines as COMDATs
+-d2s (C++) -d2 and inlines as statics
+-d2t (C++) -d2 but without type names
+-d3  debug info with unref'd type names
+-d3i (C++) -d3 and inlines as COMDATs
+-d3s (C++) -d3 and inlines as statics
+        [Optimization options]
+-oa         relax alias checking
+-ob         branch prediction
+-oc         disable call/ret optimization
+-od         disable optimizations
+-oe[=<num>] expand functions inline (<num> max size)
+-of[+]      generate traceable stack frames
+-oh         enable repeated optimizations
+-oi         inline intrinsic functions
+-oi+        (C++) -oi with max inlining depth
+-ok         control flow entry/exit seq.
+-ol         perform loop optimizations
+-ol+        -ol with loop unrolling
+-om         generate inline math functions
+-on         numerically unstable floating-point
+-oo         continue compile when low on memory
+-op         improve floating-point consistency
+-or         re-order instructions to avoid stalls
+-os         optimize for space
+-ot         optimize for time
+-ou         ensure unique addresses for functions
+-ox         maximum optimization (-obmiler -s)
+        [C++ exception handling options]
+-xd  no exception handling
+-xds no exception handling: space
+-xdt no exception handling
+-xs  exception handling: balanced
+-xss exception handling: space
+-xst exception handling: time
+        [Preprocessor options]
+-d+             extend syntax of -d option
+-d<name>[=text] define a macro
+-fo=<file>      set object file name
+-i=<path>       include directory
+-p{c,l,w=<num>} Preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output at column <num>
+-pil            ignore #line directives
+-t=<num>        (C++) <num> of spaces in tab stop
+-tp=<name>      (C) set #pragma on( <name> )
+-u<name>        undefine macro name
+        [Linker options]
+-"linker_directives" additional linker directives
+-@=<file>            additional directive file
+-bcl=<os>            compile and link for <os>
+-bd                  build Dynamic link library
+-bm                  build Multi-thread application
+-br                  build with dll run-time library
+-bw                  build default Windowing app.
+-fd[=<file>]         write directives
+-fe=<file>           name executable file
+-fm[=<file>]         generate map file
+-k<stack_size>       set stack size
+-l=<target>          link for the specified <target>
+/opt/watcom/binl64/wcl386.sym
+/opt/watcom/binl64/wclaxp
+Open Watcom C/C++ Alpha AXP Compile and Link Utility
+Version 2.0 beta Jun  1 2026 05:47:07 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1988-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage:  wclaxp [options] file(s)
+ 
+Options:
+-c    compile only, no link
+-cc   treat source files as C code
+-cc++ treat source files as C++ code
+-y    ignore the WCLAXP environment variable
+        [Compiler options]
+-bcl=<os>         compile and link for <os>
+-bt=<os>          compile for target <os>
+-db               generate browsing information
+-e=<num>          set error limit number <num>
+-ee               call epilogue hook routine
+-ef               full paths in messages
+-ei               force enums to be type int
+-em               minimum base type for enum is int
+-en               emit routine names in the code
+-ep[=<num>]       call prologue hook routine <num>
+-eq               do not display error messages
+-fh=<file>        pre-compiled headers
+-fhq[=<file>]     -fh without warnings
+-fhr              (C++) only read PCH
+-fhw              (C++) only write PCH
+-fhwe             (C++) don't count PCH warnings
+-fi=<file>        force include of file
+-fo=<file>        set object file name
+-fr=<file>        set error file name
+-ft               (C++) check for 8.3 file names
+-fx               (C++) no check for 8.3 file names
+-hc               codeview debug format
+-hd               dwarf debug format
+-hw               watcom debug format
+-j                change char default to signed
+-ri               promote function args/rets to int
+-s                remove stack overflow checks
+-v                output func declarations to .def
+-vcap             VC++ compat: alloca in arg lists
+-w=<num>          set warning level number <num>
+-wcd=<num>        disable warning message <num>
+-wce=<num>        enable warning message <num>
+-we               treat all warnings as errors
+-wx               set warning level to max
+-x                preprocessor ignores env.variables
+-xr               (C++) enable RTTI
+-zc               place strings in CODE segment
+-zg               function prototype using base type
+-zku=<codepage>   UNICODE support
+-zk{0,0u,1,2,3,l} double-byte support
+-zl               remove default library information
+-zld              remove file dependency information
+-zm               place functions in separate segments
+-zmf              (C++) -zm with near calls allowed
+-zp=<num>         struct packing align {1,2,4,8,16}
+-zpw              warning when padding a struct
+-zq               operate quietly
+-zs               check syntax only
+-zt=<num>         set data threshold to <num>
+-zv               (C++) enable virt. fun. removal opt
+-z{a,e}           disable/enable extensions
+        [Debugging options]
+-d0  no debugging information
+-d1  line number debugging info
+-d1+ (C) line number and types debugging info
+-d2  full symbolic debugging info
+-d2i (C++) -d2 and inlines as COMDATs
+-d2s (C++) -d2 and inlines as statics
+-d2t (C++) -d2 but without type names
+-d3  debug info with unref'd type names
+-d3i (C++) -d3 and inlines as COMDATs
+-d3s (C++) -d3 and inlines as statics
+        [Optimization options]
+-oa         relax alias checking
+-od         disable optimizations
+-oe[=<num>] expand functions inline (<num> max size)
+-oh         enable repeated optimizations
+-oi         inline intrinsic functions
+-oi+        (C++) -oi with max inlining depth
+-ok         control flow entry/exit seq.
+-ol         perform loop optimizations
+-ol+        -ol with loop unrolling
+-on         numerically unstable floating-point
+-oo         continue compile when low on memory
+-or         re-order instructions to avoid stalls
+-os         optimize for space
+-ot         optimize for time
+-ou         ensure unique addresses for functions
+-ox         maximum optimization (-oilr -s)
+        [C++ exception handling options]
+-xd  no exception handling
+-xds no exception handling: space
+-xdt no exception handling
+-xs  exception handling: balanced
+-xss exception handling: space
+-xst exception handling: time
+        [Preprocessor options]
+-d+             extend syntax of -d option
+-d<name>[=text] define a macro
+-fo=<file>      set object file name
+-i=<path>       include directory
+-p{c,l,w=<num>} Preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output at column <num>
+-pil            ignore #line directives
+-t=<num>        (C++) <num> of spaces in tab stop
+-tp=<name>      (C) set #pragma on( <name> )
+-u<name>        undefine macro name
+        [Linker options]
+-"linker_directives" additional linker directives
+-@=<file>            additional directive file
+-bcl=<os>            compile and link for <os>
+-bd                  build Dynamic link library
+-bm                  build Multi-thread application
+-br                  build with dll run-time library
+-bw                  build default Windowing app.
+-fd[=<file>]         write directives
+-fe=<file>           name executable file
+-fm[=<file>]         generate map file
+-k<stack_size>       set stack size
+-l=<target>          link for the specified <target>
+/opt/watcom/binl64/wclaxp.sym
+/opt/watcom/binl64/wclmps
+Open Watcom C/C++ MIPS Compile and Link Utility
+Version 2.0 beta Jun  1 2026 05:47:07 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1988-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage:  wclmps [options] file(s)
+ 
+Options:
+-c    compile only, no link
+-cc   treat source files as C code
+-cc++ treat source files as C++ code
+-y    ignore the WCLMPS environment variable
+        [Compiler options]
+-bcl=<os>         compile and link for <os>
+-bt=<os>          compile for target <os>
+-db               generate browsing information
+-e=<num>          set error limit number <num>
+-ee               call epilogue hook routine
+-ef               full paths in messages
+-ei               force enums to be type int
+-em               minimum base type for enum is int
+-en               emit routine names in the code
+-ep[=<num>]       call prologue hook routine <num>
+-eq               do not display error messages
+-fh=<file>        pre-compiled headers
+-fhq[=<file>]     -fh without warnings
+-fhr              (C++) only read PCH
+-fhw              (C++) only write PCH
+-fhwe             (C++) don't count PCH warnings
+-fi=<file>        force include of file
+-fo=<file>        set object file name
+-fr=<file>        set error file name
+-ft               (C++) check for 8.3 file names
+-fx               (C++) no check for 8.3 file names
+-hc               codeview debug format
+-hd               dwarf debug format
+-hw               watcom debug format
+-j                change char default to signed
+-ri               promote function args/rets to int
+-s                remove stack overflow checks
+-v                output func declarations to .def
+-vcap             VC++ compat: alloca in arg lists
+-w=<num>          set warning level number <num>
+-wcd=<num>        disable warning message <num>
+-wce=<num>        enable warning message <num>
+-we               treat all warnings as errors
+-wx               set warning level to max
+-x                preprocessor ignores env.variables
+-xr               (C++) enable RTTI
+-zc               place strings in CODE segment
+-zg               function prototype using base type
+-zku=<codepage>   UNICODE support
+-zk{0,0u,1,2,3,l} double-byte support
+-zl               remove default library information
+-zld              remove file dependency information
+-zm               place functions in separate segments
+-zmf              (C++) -zm with near calls allowed
+-zp=<num>         struct packing align {1,2,4,8,16}
+-zpw              warning when padding a struct
+-zq               operate quietly
+-zs               check syntax only
+-zt=<num>         set data threshold to <num>
+-zv               (C++) enable virt. fun. removal opt
+-z{a,e}           disable/enable extensions
+        [Debugging options]
+-d0  no debugging information
+-d1  line number debugging info
+-d1+ (C) line number and types debugging info
+-d2  full symbolic debugging info
+-d2i (C++) -d2 and inlines as COMDATs
+-d2s (C++) -d2 and inlines as statics
+-d2t (C++) -d2 but without type names
+-d3  debug info with unref'd type names
+-d3i (C++) -d3 and inlines as COMDATs
+-d3s (C++) -d3 and inlines as statics
+        [Optimization options]
+-oa         relax alias checking
+-od         disable optimizations
+-oe[=<num>] expand functions inline (<num> max size)
+-oh         enable repeated optimizations
+-oi         inline intrinsic functions
+-oi+        (C++) -oi with max inlining depth
+-ok         control flow entry/exit seq.
+-ol         perform loop optimizations
+-ol+        -ol with loop unrolling
+-on         numerically unstable floating-point
+-oo         continue compile when low on memory
+-or         re-order instructions to avoid stalls
+-os         optimize for space
+-ot         optimize for time
+-ou         ensure unique addresses for functions
+        [C++ exception handling options]
+-xd  no exception handling
+-xds no exception handling: space
+-xdt no exception handling
+-xs  exception handling: balanced
+-xss exception handling: space
+-xst exception handling: time
+        [Preprocessor options]
+-d+             extend syntax of -d option
+-d<name>[=text] define a macro
+-fo=<file>      set object file name
+-i=<path>       include directory
+-p{c,l,w=<num>} Preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output at column <num>
+-pil            ignore #line directives
+-t=<num>        (C++) <num> of spaces in tab stop
+-tp=<name>      (C) set #pragma on( <name> )
+-u<name>        undefine macro name
+        [Linker options]
+-"linker_directives" additional linker directives
+-@=<file>            additional directive file
+-bcl=<os>            compile and link for <os>
+-bd                  build Dynamic link library
+-bm                  build Multi-thread application
+-br                  build with dll run-time library
+-bw                  build default Windowing app.
+-fd[=<file>]         write directives
+-fe=<file>           name executable file
+-fm[=<file>]         generate map file
+-k<stack_size>       set stack size
+-l=<target>          link for the specified <target>
+/opt/watcom/binl64/wclmps.sym
+/opt/watcom/binl64/wclppc
+Open Watcom C/C++ PowerPC Compile and Link Utility
+Version 2.0 beta Jun  1 2026 05:47:08 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1988-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage:  wclppc [options] file(s)
+ 
+Options:
+-c    compile only, no link
+-cc   treat source files as C code
+-cc++ treat source files as C++ code
+-y    ignore the WCLPPC environment variable
+        [Compiler options]
+-bcl=<os>         compile and link for <os>
+-bt=<os>          compile for target <os>
+-db               generate browsing information
+-e=<num>          set error limit number <num>
+-ee               call epilogue hook routine
+-ef               full paths in messages
+-ei               force enums to be type int
+-em               minimum base type for enum is int
+-en               emit routine names in the code
+-ep[=<num>]       call prologue hook routine <num>
+-eq               do not display error messages
+-fh=<file>        pre-compiled headers
+-fhq[=<file>]     -fh without warnings
+-fhr              (C++) only read PCH
+-fhw              (C++) only write PCH
+-fhwe             (C++) don't count PCH warnings
+-fi=<file>        force include of file
+-fo=<file>        set object file name
+-fr=<file>        set error file name
+-ft               (C++) check for 8.3 file names
+-fx               (C++) no check for 8.3 file names
+-hc               codeview debug format
+-hd               dwarf debug format
+-hw               watcom debug format
+-j                change char default to signed
+-ri               promote function args/rets to int
+-s                remove stack overflow checks
+-v                output func declarations to .def
+-vcap             VC++ compat: alloca in arg lists
+-w=<num>          set warning level number <num>
+-wcd=<num>        disable warning message <num>
+-wce=<num>        enable warning message <num>
+-we               treat all warnings as errors
+-wx               set warning level to max
+-x                preprocessor ignores env.variables
+-xr               (C++) enable RTTI
+-zc               place strings in CODE segment
+-zg               function prototype using base type
+-zku=<codepage>   UNICODE support
+-zk{0,0u,1,2,3,l} double-byte support
+-zl               remove default library information
+-zld              remove file dependency information
+-zm               place functions in separate segments
+-zmf              (C++) -zm with near calls allowed
+-zp=<num>         struct packing align {1,2,4,8,16}
+-zpw              warning when padding a struct
+-zq               operate quietly
+-zs               check syntax only
+-zt=<num>         set data threshold to <num>
+-zv               (C++) enable virt. fun. removal opt
+-z{a,e}           disable/enable extensions
+        [Debugging options]
+-d0  no debugging information
+-d1  line number debugging info
+-d1+ (C) line number and types debugging info
+-d2  full symbolic debugging info
+-d2i (C++) -d2 and inlines as COMDATs
+-d2s (C++) -d2 and inlines as statics
+-d2t (C++) -d2 but without type names
+-d3  debug info with unref'd type names
+-d3i (C++) -d3 and inlines as COMDATs
+-d3s (C++) -d3 and inlines as statics
+        [Optimization options]
+-oa         relax alias checking
+-od         disable optimizations
+-oe[=<num>] expand functions inline (<num> max size)
+-oh         enable repeated optimizations
+-oi         inline intrinsic functions
+-oi+        (C++) -oi with max inlining depth
+-ok         control flow entry/exit seq.
+-ol         perform loop optimizations
+-ol+        -ol with loop unrolling
+-on         numerically unstable floating-point
+-oo         continue compile when low on memory
+-or         re-order instructions to avoid stalls
+-os         optimize for space
+-ot         optimize for time
+-ou         ensure unique addresses for functions
+-ox         maximum optimization (-oilr -s)
+        [C++ exception handling options]
+-xd  no exception handling
+-xds no exception handling: space
+-xdt no exception handling
+-xs  exception handling: balanced
+-xss exception handling: space
+-xst exception handling: time
+        [Preprocessor options]
+-d+             extend syntax of -d option
+-d<name>[=text] define a macro
+-fo=<file>      set object file name
+-i=<path>       include directory
+-p{c,l,w=<num>} Preprocess source file
+  c             - preserve comments
+  l             - insert #line directives
+  w=<num>       - wrap output at column <num>
+-pil            ignore #line directives
+-t=<num>        (C++) <num> of spaces in tab stop
+-tp=<name>      (C) set #pragma on( <name> )
+-u<name>        undefine macro name
+        [Linker options]
+-"linker_directives" additional linker directives
+-@=<file>            additional directive file
+-bcl=<os>            compile and link for <os>
+-bd                  build Dynamic link library
+-bm                  build Multi-thread application
+-br                  build with dll run-time library
+-bw                  build default Windowing app.
+-fd[=<file>]         write directives
+-fe=<file>           name executable file
+-fm[=<file>]         generate map file
+-k<stack_size>       set stack size
+-l=<target>          link for the specified <target>
+/opt/watcom/binl64/wclppc.sym
+/opt/watcom/binl64/wcl.sym
+/opt/watcom/binl64/wd
+/opt/watcom/binl64/wd.dbg
+/opt/watcom/binl64/wdis
+Open Watcom Multi-processor Disassembler
+Version 2.0 beta Jun  1 2026 05:46:55 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1995-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage:  wdis [options] obj_file [options]
+Options:
+-?          print this message
+-a          generate assembleable output
+-e          generate lists of externs
+      Instruction format
+-f{f,i,p,r,u} 
+  f         - FPU emulator fixups as comment [80(x)86 only]
+  i         - use alternate indexing format [80(x)86 only]
+  p         - do not use instruction name pseudonyms
+  r         - do not use register name pseudonyms [RISC only]
+  u         - instructions/registers in upper case
+-i=<char>   initial character of internal labels
+-l[=<file>] generate listing file
+-m          leave C++ names mangled
+-p          generate list of publics
+-s[=<file>] include source lines
+/opt/watcom/binl64/wdis.sym
+/opt/watcom/binl64/wdkeys.dbg
+/opt/watcom/binl64/wd.sym
+/opt/watcom/binl64/wdump
+Open Watcom Executable Image Dump Utility
+Version 2.0 beta Jun  1 2026 05:47:01 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Could not open '?': No such file or directory
+/opt/watcom/binl64/wfc
+Open Watcom FORTRAN 77 x86 16-bit Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:45:52 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage: wfc [options] <file-spec> [options]
+Options:
+        *File Management Options*
+-DIsk      listing file to disk
+-ERrorfile generate an error file
+-FO        name object file
+-INCList   list INCLUDE files
+-INCPath   path for INCLUDE files
+-LISt      generate a listing file
+-PRint     listing file to printer
+-TYpe      listing file to terminal
+        *Diagnostic Options*
+-BOunds     generate bounds checking
+-DEBug      -trace -bounds
+-EXPlicit   explicit typing required
+-EXtensions issue extension messages
+-Reference  issue unreferenced warning
+-STack      stack checking
+-TRace      generate run-time traceback
+-WArnings   issue warning messages
+        *Debugging Options*
+-D1 line # debugging information
+-D2 full debugging information
+-HC Codeview debugging info.
+-HD DWARF debugging information
+-HW WATCOM debugging information
+        *Floating-Point Options*
+-FP287 80287 instructions
+-FP387 80387 instructions
+-FP5   -fp3 optimized for Pentium
+-FP6   -fp3 optimized for Pentium Pro
+-FPC   floating-point calls
+-FPD   enable Pentium FDIV check
+-FPI   emulate 80x87 instructions
+-FPI87 in-line 80x87 instructions
+-FPR   80x87 reverse compatibility
+        *Optimizations*
+-OBP branch prediction
+-OC  no call-ret optimizations
+-OD  disable optimizations
+-ODO DO-variables do not overflow
+-OH  optimize at expense of compile-time
+-OI  statement functions in-line
+-OK  move register saves into flow graph
+-OL  loop optimizations
+-OL+ loop optimizations/unrolling
+-OM  math optimizations
+-ON  numerical optimizations
+-OP  precision optimizations
+-OR  instruction scheduling
+-OS  space optimizations
+-OT  time optimizations
+-OX  -o[bp,i,k,l,m,r,t,do]
+        *Memory Models*
+-MH huge memory model
+-ML large memory model
+-MM medium memory model
+        *CPU Targets*
+-0 assume 8086 processor
+-1 assume 80186 processor
+-2 assume 80286 processor
+-3 assume 80386 processor
+-4 optimized for 80486
+-5 optimized for Pentium
+-6 optimized for Pentium Pro
+        *Application Type*
+-BW      default windowed application
+-WINdows generate code for Windows
+        *Character Set Options*
+-CHInese  Chinese character set
+-Japanese Japanese character set
+-KOrean   Korean character set
+        *Miscellaneous Options*
+-ALign      align COMMON segments
+-AUtomatic  local variables on the stack
+-CC         devices are carriage control
+-COde       constants in code segment
+-DEFine     define macro
+-DEPendency generate file dependencies
+-DEScriptor pass character descriptors
+-DT         set data threshold
+-FORmat     relax FORMAT type checking
+-FSfloats   FS not fixed
+-GSfloats   GS not fixed
+-IPromote   promote intrinsic arguments
+-LFwithFF   LF with FF
+-LIBinfo    generate default libraries
+-MAngle     mangle COMMON segment names
+-Quiet      operate quietly
+-RESources  messages in resource file
+-SAve       SAVE local variables
+-SEpcomma   allow comma separator
+-SHort      INTEGER/LOGICAL size 2/1
+-SR         save/restore segment regs
+-SSfloats   SS not default data segment
+-SYntax     syntax check only
+-TErminal   display diagnostic messages
+-WILd       relax wild branch checking
+-XFloat     extend float-pt. precision
+-XLine      extend line length
+/opt/watcom/binl64/wfc386
+Open Watcom FORTRAN 77 x86 32-bit Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:45:24 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage: wfc386 [options] <file-spec> [options]
+Options:
+        *File Management Options*
+-DIsk      listing file to disk
+-ERrorfile generate an error file
+-FO        name object file
+-INCList   list INCLUDE files
+-INCPath   path for INCLUDE files
+-LISt      generate a listing file
+-PRint     listing file to printer
+-TYpe      listing file to terminal
+        *Diagnostic Options*
+-BOunds     generate bounds checking
+-DEBug      -trace -bounds
+-EXPlicit   explicit typing required
+-EXtensions issue extension messages
+-Reference  issue unreferenced warning
+-STack      stack checking
+-TRace      generate run-time traceback
+-WArnings   issue warning messages
+        *Debugging Options*
+-D1 line # debugging information
+-D2 full debugging information
+-HC Codeview debugging info.
+-HD DWARF debugging information
+-HW WATCOM debugging information
+        *Floating-Point Options*
+-FP287 80287 instructions
+-FP387 80387 instructions
+-FP5   -fp3 optimized for Pentium
+-FP6   -fp3 optimized for Pentium Pro
+-FPC   floating-point calls
+-FPD   enable Pentium FDIV check
+-FPI   emulate 80x87 instructions
+-FPI87 in-line 80x87 instructions
+-FPR   80x87 reverse compatibility
+        *Optimizations*
+-OB  base pointer optimizations
+-OBP branch prediction
+-OC  no call-ret optimizations
+-OD  disable optimizations
+-ODO DO-variables do not overflow
+-OF  no stack frame optimizations
+-OH  optimize at expense of compile-time
+-OI  statement functions in-line
+-OK  move register saves into flow graph
+-OL  loop optimizations
+-OL+ loop optimizations/unrolling
+-OM  math optimizations
+-ON  numerical optimizations
+-OP  precision optimizations
+-OR  instruction scheduling
+-OS  space optimizations
+-OT  time optimizations
+-OX  -o[b,bp,i,k,l,m,r,t,do]
+        *Memory Models*
+-MC compact memory model
+-MF flat memory model
+-ML large memory model
+-MM medium memory model
+-MS small memory model
+        *CPU Targets*
+-3 assume 80386 processor
+-4 optimized for 80486
+-5 optimized for Pentium
+-6 optimized for Pentium Pro
+        *Application Type*
+-BD      dynamic link library
+-BM      multithread application
+-BW      default windowed application
+-WINdows generate code for Windows
+        *Character Set Options*
+-CHInese  Chinese character set
+-Japanese Japanese character set
+-KOrean   Korean character set
+        *Miscellaneous Options*
+-ALign      align COMMON segments
+-AUtomatic  local variables on the stack
+-CC         devices are carriage control
+-COde       constants in code segment
+-DEFine     define macro
+-DEPendency generate file dependencies
+-DEScriptor pass character descriptors
+-DT         set data threshold
+-EZ         Easy OMF-386 object files
+-FORmat     relax FORMAT type checking
+-FSfloats   FS not fixed
+-GSfloats   GS not fixed
+-IPromote   promote intrinsic arguments
+-LFwithFF   LF with FF
+-LIBinfo    generate default libraries
+-MAngle     mangle COMMON segment names
+-Quiet      operate quietly
+-RESources  messages in resource file
+-SAve       SAVE local variables
+-SC         stack calling convention
+-SEpcomma   allow comma separator
+-SG         automatic stack growing
+-SHort      INTEGER/LOGICAL size 2/1
+-SR         save/restore segment regs
+-SSfloats   SS not default data segment
+-SYntax     syntax check only
+-TErminal   display diagnostic messages
+-WILd       relax wild branch checking
+-XFloat     extend float-pt. precision
+-XLine      extend line length
+/opt/watcom/binl64/wfc386.sym
+/opt/watcom/binl64/wfc.sym
+/opt/watcom/binl64/wfl
+Open Watcom F77 x86 16-bit Compile and Link Utility
+Version 2.0 beta Jun  1 2026 05:47:10 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1990-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+/opt/watcom/binl64/wfl386
+Open Watcom F77 x86 32-bit Compile and Link Utility
+Version 2.0 beta Jun  1 2026 05:47:09 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1990-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+/opt/watcom/binl64/wfl386.sym
+/opt/watcom/binl64/wfl.sym
+/opt/watcom/binl64/whc
+/opt/watcom/binl64/whelp
+
+The Watcom Help command line:
+
+               whelp help_file [topic_name]
+
+- if help_file is specified without an extension ".ihp" is assumed
+- the topic_name parameter is optional
+- if topic_name is not specifed the default topic used.
+- if topic_name contains spaces then it must be enclosed in quotes
+
+The following help files are available:
+
+/opt/watcom/binl64/wipfc
+Open Watcom OS/2 Help Compiler Version 2.0
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+The 'WIPFC' environment variable needs to be set. It should contain the name of the directory containing .nls and entity.txt files.
+/opt/watcom/binl64/wlib
+Open Watcom Library Manager
+Version 2.0 beta Jun  1 2026 05:36:30 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+/opt/watcom/binl64/wlib.sym
+/opt/watcom/binl64/wlink
+Open Watcom Linker Version 2.0 beta Jun  1 2026 05:36:41 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+ 
+usage: wlink {directive}
+ 
+commands valid for all executable formats:
+ 
+directive  ::= "File"        obj_spec{","obj_spec}
+            | "Name"         exe_file
+            | "OPtion"       option{","option}
+            | "Library"      library_file{","library_file}
+            | "OPTLIB"       library_file{","library_file}
+            | "Path"         path_name{";"path_name}
+            | "LIBPath"      path_name{";"path_name}
+            | "LIBFile"      obj_file{","obj_file}
+            | "Debug"        dbtype [dblist] | dblist
+            | "MODTrace"     module_name{","module_name}
+            | "SYMTrace"     symbol_name{","symbol_name}
+            | "SYStem"       system_name
+            | "SYStem Begin" system_name directive {directive} "End"
+            | "FORMat"       form
+            | "REFerence"    symbol_name{","symbol_name}
+            | "@"            directive_file
+            | "#"            comment
+            | "Alias"        alias"="symbol_name{","alias"="symbol_name}
+            | "DISAble"      msg_num{","msg_num}
+            | "SOrt"         ["GLobal"] ["ALPhabetical"]
+            | "LANGuage"     ("JApanese" | "CHinese" | "KOrean")
+            | "STARTLINK"
+            | "ENDLINK"
+            | "MODFile"      obj_file{","obj_file}
+obj_spec  ::= obj_file["("obj_member")"] | library_file["("lib_member")"]
+dbtype    ::= "Watcom" | "Dwarf" | "Codeview"
+dblist    ::= dboption{","dboption}
+dboption  ::= "LInes" | "Types" | "LOcals" | "All"
+option    ::= "ARTificial" | "[NO]CAChe" | "[NO]Caseexact" | "CVPack"
+            | "Dosseg" | "ELiminate" | "[NO]FARcalls"
+            | "INCremental[=file_name]" | "MANGlednames"
+            | "Map"["="map_file] | "MAXErrors="n | "NAMELen="n
+            | "NODefaultlibs" | "NOEXTension" | "OSName="string | "Quiet"
+            | "[NO]REDefsok" | "STack"=n | "START="symbol_name | "STATics"
+            | "SYMFile"["="symbol_file], | "[NO]Undefsok" | "Verbose"
+            | "VFRemoval"
+ 
+commands valid for the MS-DOS executable format only:
+ 
+form      ::= "Dos" ["COM"]
+directive ::= "NEWsegment"
+option    ::= "FULLHeader" | "PACKCode="n | "PACKData="n
+ 
+commands valid for the OS/2 and DOS/4G executable formats only:
+ 
+form      ::= "OS2" ["FLat" | "LE" | "LX"] ["PHYSdevice" | "VIRTdevice"
+            | "DLl" ["INITGlobal" | "INITInstance"
+                 ["TERMInstance" | "TERMGlobal"]]
+            | "PM" | "PMCompatible" | "FULLscreen"] 
+directive ::= "NEWsegment"
+            | "SEGment"     segdesc{","segdesc}
+            | "IMPort"      import{","import}
+            | "EXPort"      export{","export}
+            | "EXPort"      "="wlib_directive_file
+segdesc   ::= segspec segmodel {segmodel}
+segspec   ::= seg_name | "Class" class_name | "TYpe" ("CODE" | "DATA")
+import    ::= entryname module["."(extname | ordinal)]
+option    ::= "Alignment="n | "DEscription" description | "Heapsize="n
+            | "IMPFile"[=file_name] | "IMPLib"[=file_name]
+            | ("MANYautodata" | "NOautodata" | "ONEAutodata")
+            | "MODName="module_name | "MIXed1632" | "NEWFiles" | "OFFset="n
+            | "OLDlibrary="dll_name | "PACKCode="n | "PACKData="n | "PROTmode"
+            | "RESource="res_file_name | "STUB="stub_name | "NOSTUB"
+            | "VERSion="major[.minor]
+export    ::= entryname["."ordinal]["="internal]["RESident"]["PRIVATE"][iopl]
+segmodel  ::= ("PReload" | "LOadoncall") | ("SHared" | "NONShared")
+            | ("EXECUTEOnly" | "EXECUTERead" | "READOnly" | "READWrite")
+            | ("Iopl" | "NOIopl") | ("CONforming" | "NONConforming")
+            | ("PERManent" | "NONPERManent") | "INValid" | "RESident"
+            | "CONTiguous" | "DYNamic"
+ 
+commands valid for the Microsoft Windows executable formats only:
+ 
+form      ::= "WIndows" ["DLl" ["INITGlobal" | "INITInstance"]] [MEMory] [FOnt]
+directive ::= "NEWsegment"
+            | "SEGment"     segdesc{","segdesc}
+            | "IMPort"      import{","import}
+            | "EXPort"      export{","export}
+            | "EXPort"      "="wlib_directive_file
+segdesc   ::= segspec segmodel {segmodel}
+segspec   ::= seg_name | "Class" class_name | "TYpe" ("CODE" | "DATA")
+import    ::= entryname module["."(extname | ordinal)]
+option    ::= "Alignment="n | "DEscription" description | "Heapsize="n
+            | "IMPFile"[=file_name] | "IMPLib"[=file_name]
+            | ("MANYautodata" | "NOautodata" | "ONEAutodata")
+            | "MODName="module_name | "OLDlibrary="dll_name | "PACKCode="n
+            | "PACKData="n | "RESource="res_file_name | "RWReloccheck"
+            | "STUB="stub_name | "NOSTUB" | "VERSion="major[.minor]
+export    ::= entryname["."ordinal]["="internal]["RESident"]["PRIVATE"]
+segmodel  ::= ("PReload" | "LOadoncall") | ("SHared" | "NONShared")
+            | ("EXECUTEOnly" | "EXECUTERead" | "READOnly" | "READWrite")
+            | ("MOVeable" | "FIXed") | "DIScardable"
+ 
+commands valid for the Microsoft Windows VxD formats only:
+ 
+form      ::= "WIndows VXD" ["STATic" | "DYNamic"]
+ 
+commands valid for the Microsoft Windows NT executable formats only:
+ 
+form      ::= "WIndows NT" ["TNT"]
+              ["DLl" ["INITGlobal" | "INITInstance" | "INITThread"
+                  ["TERMInstance" | "TERMGlobal" | "TERMThread"]]]
+directive ::= "RUntime"     runoption[=major[.minor]]
+            | "SEGment"     segdesc{","segdesc}
+            | "IMPort"      import{","import}
+            | "EXPort"      export{","export}
+            | "EXPort"      "="wlib_directive_file
+            | "COMmit"       commitopt{","commitopt}
+segdesc   ::= segspec segmodel {segmodel}
+segspec   ::= seg_name | "Class" class_name | "TYpe" ("CODE" | "DATA")
+import    ::= entryname module["."(extname | ordinal)]
+option    ::= "Alignment="n | "DEscription" description | "Heapsize="n
+            | "IMPFile"[=file_name] | "IMPLib"[=file_name]
+            | "MODName="module_name | "NOSTDCall" | "OBJAlign="n | "OFFset="n
+            | "OLDlibrary="dll_name | "RESource="res_file_name
+            | "STUB="stub_name | "NOSTUB" | "VERSion"=major[.minor]
+export    ::= entryname["."ordinal]["="internal]["PRIVATE"]
+segmodel  ::= ("SHared" | "NONShared") | ("PAGEable" | "NONPageable")
+runoption ::= ("NATive" | "WINdows" | "CONsole" | "POSix" | "OS2" | "DOSstyle"
+            | "RDOS" | "EFIBoot")
+commitopt ::= "STack="n | "Heap="n
+ 
+commands valid for the Phar Lap executable formats only:
+ 
+form      ::= "PHARlap" ["EXTended" | "REX" | "SEGmented"]
+directive ::= "RUntime"     runoption{","runoption}
+option    ::= "MAXData="n | "MINData="n | "OFFset="n | "STUB="stub_name
+runoption ::= "MINReal="n | "MAXReal="n | "CALLBufs="n | "MINIBuf="n
+            | "MAXIBuf="n | "NISTack="n | "ISTKsize="n | "PRIVileged"
+            | "REALBreak="(n | symbol_name ) | "UNPRIVileged"
+ 
+commands valid for the Novell Netware executable format only:
+ 
+form      ::= "NOVell" ["NLM" | "LAN" | "DSK" | "NAM" | 'number'] 'description'
+directive ::= "MODUle"      module_name{","module_name}
+            | "IMPort"      import{","import}
+            | "EXPort"      export{","export}
+            | "Debug"       "Novell" ["ONLyexports"] ["REFerenced"]
+option    ::= "CHeck="symbol_name | "COPYRight" [string] | "CUSTom="file_name
+            | "EXit="symbol_name | "HElp="file_name | "IMPFile="file_name
+            | "IMPLib"[=file_name] | "MESsages"[=file_name] | "MULTILoad"
+            | "NLMFlags="value | "PSeudopreemption" | "REentrant"
+            | "SCReenname" description | "SHArelib="file_name | "SYnchronize"
+            | "THReadname" name | "VERSion="major[.minor[.revision]]
+            | "XDCdata="file_name | "AUTOUNload"
+import    ::= entryname
+export    ::= entryname
+ 
+commands valid for the DOS/16M executable format only:
+ 
+form      ::= "DOS16M"
+directive ::= "MEMory"      strategy
+            | "TRansparent" seg_type
+            | "RUntime"     runoption{","runoption}
+option    ::= "BUFfer="n | "GDTsize="n | ("RELocs" | "NORelocs") | "SELstart="n
+            | "DATASize="n | "EXTended="n
+            | "EXPName="exp_name | "STUB="stub_name
+runoption ::= "KEYboard" | "OVERload" | "INIT00" | "INITFF" | "ROTate" | "AUTO"
+            | "SELectors" | "INT10"
+strategy  ::= "TRYExtended" | "TRYLow" | "FORCEExtended" | "FORCELow"
+seg_type  ::= "STack" | "DAta"
+ 
+commands valid for the QNX executable format only:
+ 
+form      ::= "QNX" ["FLat"]
+directive ::= "SEGment"     segdesc{","segdesc}
+            | "NEWsegment"
+option    ::= "Heapsize="n | "LInearrelocs" | "LOnglived" | "NORelocs"
+            | "OFFset="n | "PACKCode="n | "PACKData="n | "PRIVilege"=n
+            | "RESource"("="res_file_name | string)
+segdesc   ::= segspec segmodel {segmodel}
+segspec   ::= seg_name | "Class" class_name | "TYpe" ("CODE" | "DATA")
+segmodel  ::= "EXECUTEOnly" | "EXECUTERead" | "READOnly" | "READWrite"
+ 
+commands valid for the ELF executable format only:
+ 
+form      ::= "ELF" ["DLl"]
+directive ::= "MODUle"      module_name{","module_name}
+            | "IMPort"      import{","import}
+            | "EXPort"      export{","export}
+            | "RUntime"     runoption{","runoption}
+option    ::= "Alignment="n | "EXPORTAll" | "EXTRASections="n | "OBJAlign="n
+            | "OFFSet="n
+import    ::= entryname
+export    ::= entryname
+runoption ::= ("SVR4" | "LINux" | "FREebsd" | "NETbsd" | "SOLaris" | "ABIver" )
+ 
+commands valid for the RDOS special executable formats only:
+ 
+form      ::= "RDos" ["DEV" | "BIN" | "MBOOT"]
+ 
+commands valid for the RAW executable formats only:
+ 
+form      ::= "Raw" ("BIN" | "HEX")
+option    ::= "OFFset="n
+/opt/watcom/binl64/wlink.lnk
+/opt/watcom/binl64/wlink.sym
+/opt/watcom/binl64/wmake
+Open Watcom Make Version 2.0 beta Jun  1 2026 05:36:55 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1988-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+Usage  :  wmake [options]* [macro=text]* [target]*
+Options:
+-a make all targs (ignoring time stamp)  -b  block/ignore all implicit rules
+-c do not check existence of files made  -d  debug mode (echo progress of work)
+-e erase files after error (no prompt)
+-f <filename>  process filename instead of MAKEFILE ('-f -' means stdin)
+-h do not print program header           -i  ignore command return status
+-k continue after an error               -l <logfile>   output to logfile
+-m do not read MAKEINIT file             -ms Microsoft NMAKE mode
+-n print commands without executing      -o  take advantage of circular path
+-p print the dependency tree, macro definitions, and extension information
+-q query mode (commands not executed)    -r  ignore built-in definitions
+-s silent mode (do not print commands)   -sn noisy mode (print all commands)
+-t touch files (commands not executed)
+-u  UNIX compatibility mode
+-v verbose listing of inline files       -y  show why a target will be updated
+-z do not erase files (no prompt)
+macro=text      overrides the definition of 'macro' with the value 'text'
+target          specifies a target to make (default is first target)
+/opt/watcom/binl64/wmake.sym
+/opt/watcom/binl64/wpp
+Open Watcom C++ x86 16-bit Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:42:35 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1989-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+Usage: wpp [options] file [options]
+Options:
+          ( '=' is always optional, i.e., -w4 -zp4 )
+-0                8086 instructions
+-1                186 instructions
+-2                286 instructions
+-3                386 instructions
+-4                386 instructions, optimize for 486
+-5                386 instructions, optimize for Pentium
+-6                386 instructions, optimize for Pentium Pro
+         Make Dependency info
+-ad{[=<file>],bs,d[=<file>],fs,hp[=<file>],t[=<file>]} 
+  [=<file>]       - generate make style automatic dependency file
+  bs              - force path separators to '\' in auto-depend file
+  d[=<file>]      - specify first dependency in make style auto-depend file
+  fs              - force path separators to '/' in auto-depend file
+  hp[=<file>]     - specify default path for headers without one
+  t[=<file>]      - specify target in make style auto-depend file
+-b{c,d,g,m,w}     Application type
+  c               - build target is a console application
+  d               - build target is a dynamic link library (DLL)
+  g               - build target is a GUI application
+  m               - build target is a multi-thread environment
+  w               - build target is a default windowing application
+-bt[=<os>]        build target is operating system <os>
+         Debugging information
+-d{0,1,2,2i,2s,2t,3,3i,3s,b} 
+  0               - no debugging information
+  1               - line number debugging information
+  2               - symbolic debugging information
+  2i              - d2 and debug inlines; emit inlines as COMDATs
+  2s              - d2 and debug inlines; emit inlines as statics
+  2t              - d2 but without type names
+  3               - symbolic debugging information with unreferenced type names
+  3i              - d3 and debug inlines; emit inlines as COMDATs
+  3s              - d3 and debug inlines; emit inlines as statics
+  b               - generate browsing information
+-d<name>[=text]   same as #define name [text] before compilation
+-d+               allow extended -d macro definitions
+-e=<num>          set limit on number of error messages
+         Default calling convention
+-ec{c,d,f,p,r,s,w} 
+  c               - set default calling convention to __cdecl
+  d               - set default calling convention to __stdcall
+  f               - set default calling convention to __fastcall
+  p               - set default calling convention to __pascal
+  r               - set default calling convention to __fortran
+  s               - set default calling convention to __syscall
+  w               - set default calling convention to __watcall (default)
+-ee               call epilogue hook routine
+-ef               use full path names in error messages
+-ei               force enum base type to use at least an int
+-em               force enum base type to use minimum integral type
+-en               emit routine names in the code segment
+-ep[=<num>]       call prologue hook routine with <num> stack bytes available
+-eq               do not display error messages (but still write to .err file)
+-er               do not recover from undefined symbol errors
+-ew               alternate error message formatting
+-fc=<file>        specify file of command lines to be batch processed
+         Precompiled Header Files (PCH)
+-fh{[=<file>],d,q[=<file>],r,w,we} 
+  [=<file>]       - use pre-compiled header (PCH) file
+  d               - store debug info for PCH once (DWARF only)
+  q[=<file>]      - do not display PCH activity warnings
+  r               - force compiler to read PCH (will never write)
+  w               - force compiler to write PCH (will never read)
+  we              - don't count PCH activity warnings (see -we option)
+-fi=<file>        force <file> to be included
+-fip[=<file>]     automatic inclusion of <file> instead of _preincl.h (default)
+-fo[=<file>]      set object or preprocessor output file name
+         Generate Floating-point code
+-fp{2,3,5,6,c,d,i,i87,r} 
+  2               - generate 287 floating-point code
+  3               - generate 387 floating-point code
+  5               - optimize floating-point for Pentium
+  6               - optimize floating-point for Pentium Pro
+  c               - calls to floating-point library
+  d               - enable Pentium FDIV check
+  i               - inline 80x87 instructions with emulation
+  i87             - inline 80x87 instructions
+  r               - generate backward compatible 80x87 code
+-fr[=<file>]      set error file name
+-ft               check for truncated versions of file names
+-fx               do not check for truncated versions of file names
+-fzh              do not automatically postfix include file names
+-fzs              do not automatically postfix source file names
+-g=<name>         set code group name
+-h{c,d,w}         Debugging Information Format
+  c               - generate Codeview debugging information
+  d               - generate DWARF debugging information
+  w               - generate Watcom debugging information
+-i=<path>         add another include path
+-j                change char default from unsigned to signed
+-k                continue processing files (ignore errors)
+-m{c,h,l,m,s}     Memory model
+  c               - compact - small code/large data
+  h               - huge - large code/huge data
+  l               - large - large code/large data
+  m               - medium - large code/small data
+  s               - small - small code/small data (default)
+-nc=<name>        set code class name
+-nd=<name>        set data segment name
+-nm=<file>        set module name
+-nt=<name>        set name of text segment
+         Optimization
+-o{a,b,c,d,e[=<num>],f,f+,h,i,i+,k,l,l+,m,n,o,p,r,s,t,u,x,z} 
+  a               - relax aliasing constraints
+  b               - enable branch prediction
+  c               - disable <call followed by return> to <jump> optimization
+  d               - disable all optimizations
+  e[=<num>]       - expand user functions inline (<num> controls max size)
+  f               - generate traceable stack frames as needed
+  f+              - always generate traceable stack frames
+  h               - enable expensive optimizations (longer compiles)
+  i               - expand intrinsic functions inline
+  i+              - enable maximum inlining depth
+  k               - include prologue/epilogue in flow graph
+  l               - enable loop optimizations
+  l+              - enable loop unrolling optimizations
+  m               - generate inline code for math functions
+  n               - allow numerically unstable optimizations
+  o               - continue compilation if low on memory
+  p               - generate consistent floating-point results
+  r               - reorder instructions for best pipeline usage
+  s               - favor code size over execution time in optimizations
+  t               - favor execution time over code size in optimizations
+  u               - all functions must have unique addresses
+  x               - equivalent to -obmiler -s
+  z               - NULL points to valid memory in the target environment
+         Preprocess source file
+-p{,c,e,l,w=<num>} 
+                  - preprocess source file
+  c               - preserve comments
+  e               - encrypt identifiers
+  l               - insert #line directives
+  w=<num>         - wrap output lines at <num> columns. Zero means no wrap.
+-pil              preprocessor ignores #line directives
+-pm               dump predefined macros to output
+-q                operate quietly (display only error messages)
+-r                save/restore segment registers across calls
+-ri               return chars and shorts as ints
+-s                remove stack overflow checks
+-sg               generate calls to grow the stack
+-st               touch stack through SS first
+-t=<num>          set number of spaces in a tab stop
+-u[=<name>]       undefine macro name
+-v                output function declarations to .def file
+         Warning control
+-w{=<num>,cd=<id>,ce=<id>,e,x} 
+  =<num>          - set warning level number
+  cd=<id>         - disable warning message <id>
+  ce=<id>         - enable warning message <id>
+  e               - treat all warnings as errors
+  x               - set warning level to maximum setting
+-x                ignore INCLUDE environment variable
+-xd               disable exception handling (default)
+-xds              disable exception handling (table-driven destructors)
+-xdt              disable exception handling (same as -xd)
+-xr               enable RTTI
+-xs               enable exception handling
+-xss              enable exception handling (table-driven destructors)
+-xst              enable exception handling (direct calls for destruction)
+-xx               ignore default directories for file search (.,../h,../c,...)
+-za               disable extensions (i.e., accept only ISO/ANSI C++)
+-zam              disable all non-ISO compliant names (macros, symbols)
+-zastd=<standard> use specified ISO C++ language standard (c++98,c++0x)
+-zat              disable alternative tokens (e.g. and, or, not)
+-zc               place const data into the code segment
+-zdf              DS floats (i.e. not fixed to DGROUP)
+-zdp              DS is pegged to DGROUP
+-ze               enable extensions (i.e., near, far, export, etc.)
+-zf               scope of for loop initializer extends beyond loop
+-zff              FS floats (i.e. not fixed to a segment)
+-zfp              FS is pegged to a segment
+-zfw              generate FWAIT instructions on 386 and later
+-zg               generate function prototypes using base types
+-zgf              GS floats (i.e. not fixed to a segment)
+-zgp              GS is pegged to a segment
+         Multi-byte/Unicode character support
+-zk{0,0u,1,2,l,u=<num>} 
+  0               - double-byte character support: Kanji
+  0u              - translate double-byte Kanji to Unicode
+  1               - double-byte character support: Chinese/Taiwanese
+  2               - double-byte character support: Korean
+  l               - double-byte character support: local installed language
+  u=<num>         - load Unicode translate table for specified code page
+-zl               remove default library information
+-zld              remove file dependency information
+-zlf              always generate default library information
+-zls              remove automatically inserted symbols
+-zm               emit functions in separate segments
+-zmf              emit functions in separate segments (near functions allowed)
+-zp=<num>         pack structure members with alignment {1,2,4,8,16}
+-zpw              output warning when padding is added in a class
+-zq               operate quietly (display only error messages)
+-zri              inline floating point rounding calls
+-zro              omit floating point rounding calls (non ANSI)
+-zs               syntax check only
+-zt[=<num>]       far data threshold (i.e., larger objects go in far memory)
+-zu               SS != DGROUP (i.e., do not assume stack is in data segment)
+-zv               enable virtual function removal optimization
+-zW               more efficient Microsoft Windows entry sequences
+-zw               generate code for Microsoft Windows
+-zWs              generate code for Microsoft Windows with smart callbacks
+-zws              generate code for Microsoft Windows with smart callbacks
+/opt/watcom/binl64/wpp386
+Open Watcom C++ x86 32-bit Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:43:39 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1989-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+Usage: wpp386 [options] file [options]
+Options:
+          ( '=' is always optional, i.e., -w4 -zp4 )
+-3r               386 register calling conventions
+-3s               386 stack calling conventions
+-4r               486 register calling conventions
+-4s               486 stack calling conventions
+-5r               Pentium register calling conventions
+-5s               Pentium stack calling conventions
+-6r               Pentium Pro register calling conventions
+-6s               Pentium Pro stack calling conventions
+         Make Dependency info
+-ad{[=<file>],bs,d[=<file>],fs,hp[=<file>],t[=<file>]} 
+  [=<file>]       - generate make style automatic dependency file
+  bs              - force path separators to '\' in auto-depend file
+  d[=<file>]      - specify first dependency in make style auto-depend file
+  fs              - force path separators to '/' in auto-depend file
+  hp[=<file>]     - specify default path for headers without one
+  t[=<file>]      - specify target in make style auto-depend file
+-b{c,d,g,m,r,w}   Application type
+  c               - build target is a console application
+  d               - build target is a dynamic link library (DLL)
+  g               - build target is a GUI application
+  m               - build target is a multi-thread environment
+  r               - build target uses DLL version of C/C++ run-time library
+  w               - build target is a default windowing application
+-bt[=<os>]        build target is operating system <os>
+         Debugging information
+-d{0,1,2,2i,2s,2t,3,3i,3s,b} 
+  0               - no debugging information
+  1               - line number debugging information
+  2               - symbolic debugging information
+  2i              - d2 and debug inlines; emit inlines as COMDATs
+  2s              - d2 and debug inlines; emit inlines as statics
+  2t              - d2 but without type names
+  3               - symbolic debugging information with unreferenced type names
+  3i              - d3 and debug inlines; emit inlines as COMDATs
+  3s              - d3 and debug inlines; emit inlines as statics
+  b               - generate browsing information
+-d<name>[=text]   same as #define name [text] before compilation
+-d+               allow extended -d macro definitions
+-e=<num>          set limit on number of error messages
+         Default calling convention
+-ec{c,d,f,p,r,s,w} 
+  c               - set default calling convention to __cdecl
+  d               - set default calling convention to __stdcall
+  f               - set default calling convention to __fastcall
+  p               - set default calling convention to __pascal
+  r               - set default calling convention to __fortran
+  s               - set default calling convention to __syscall
+  w               - set default calling convention to __watcall (default)
+-ee               call epilogue hook routine
+-ef               use full path names in error messages
+-ei               force enum base type to use at least an int
+-em               force enum base type to use minimum integral type
+-en               emit routine names in the code segment
+-ep[=<num>]       call prologue hook routine with <num> stack bytes available
+-eq               do not display error messages (but still write to .err file)
+-er               do not recover from undefined symbol errors
+-et               emit Pentium profiling code
+-et0              emit Pentium-CTR0 profiling code
+-ew               alternate error message formatting
+-ez               generate PharLap EZ-OMF object files
+-fc=<file>        specify file of command lines to be batch processed
+         Precompiled Header Files (PCH)
+-fh{[=<file>],d,q[=<file>],r,w,we} 
+  [=<file>]       - use pre-compiled header (PCH) file
+  d               - store debug info for PCH once (DWARF only)
+  q[=<file>]      - do not display PCH activity warnings
+  r               - force compiler to read PCH (will never write)
+  w               - force compiler to write PCH (will never read)
+  we              - don't count PCH activity warnings (see -we option)
+-fi=<file>        force <file> to be included
+-fip[=<file>]     automatic inclusion of <file> instead of _preincl.h (default)
+-fo[=<file>]      set object or preprocessor output file name
+         Generate Floating-point code
+-fp{2,3,5,6,c,d,i,i87,r} 
+  2               - generate 287 floating-point code
+  3               - generate 387 floating-point code
+  5               - optimize floating-point for Pentium
+  6               - optimize floating-point for Pentium Pro
+  c               - calls to floating-point library
+  d               - enable Pentium FDIV check
+  i               - inline 80x87 instructions with emulation
+  i87             - inline 80x87 instructions
+  r               - generate backward compatible 80x87 code
+-fr[=<file>]      set error file name
+-ft               check for truncated versions of file names
+-fx               do not check for truncated versions of file names
+-fzh              do not automatically postfix include file names
+-fzs              do not automatically postfix source file names
+-g=<name>         set code group name
+-h{c,d,w}         Debugging Information Format
+  c               - generate Codeview debugging information
+  d               - generate DWARF debugging information
+  w               - generate Watcom debugging information
+-i=<path>         add another include path
+-j                change char default from unsigned to signed
+-k                continue processing files (ignore errors)
+-m{c,f,fi,l,m,s}  Memory model
+  c               - compact - small code/large data
+  f               - flat - small code/small data assuming CS=DS=SS=ES
+  fi              - flat - interrupt functions will assume flat model
+  l               - large - large code/large data
+  m               - medium - large code/small data
+  s               - small - small code/small data (default)
+-nc=<name>        set code class name
+-nd=<name>        set data segment name
+-nm=<file>        set module name
+-nt=<name>        set name of text segment
+         Optimization
+-o{a,b,c,d,e[=<num>],f,f+,h,i,i+,k,l,l+,m,n,o,p,r,s,t,u,x,z} 
+  a               - relax aliasing constraints
+  b               - enable branch prediction
+  c               - disable <call followed by return> to <jump> optimization
+  d               - disable all optimizations
+  e[=<num>]       - expand user functions inline (<num> controls max size)
+  f               - generate traceable stack frames as needed
+  f+              - always generate traceable stack frames
+  h               - enable expensive optimizations (longer compiles)
+  i               - expand intrinsic functions inline
+  i+              - enable maximum inlining depth
+  k               - include prologue/epilogue in flow graph
+  l               - enable loop optimizations
+  l+              - enable loop unrolling optimizations
+  m               - generate inline code for math functions
+  n               - allow numerically unstable optimizations
+  o               - continue compilation if low on memory
+  p               - generate consistent floating-point results
+  r               - reorder instructions for best pipeline usage
+  s               - favor code size over execution time in optimizations
+  t               - favor execution time over code size in optimizations
+  u               - all functions must have unique addresses
+  x               - equivalent to -obmiler -s
+  z               - NULL points to valid memory in the target environment
+         Preprocess source file
+-p{,c,e,l,w=<num>} 
+                  - preprocess source file
+  c               - preserve comments
+  e               - encrypt identifiers
+  l               - insert #line directives
+  w=<num>         - wrap output lines at <num> columns. Zero means no wrap.
+-pil              preprocessor ignores #line directives
+-pm               dump predefined macros to output
+-q                operate quietly (display only error messages)
+-r                save/restore segment registers across calls
+-ri               return chars and shorts as ints
+-s                remove stack overflow checks
+-sg               generate calls to grow the stack
+-st               touch stack through SS first
+-t=<num>          set number of spaces in a tab stop
+-u[=<name>]       undefine macro name
+-v                output function declarations to .def file
+-vcap             VC++ compatibility: alloca allowed in argument lists
+         Warning control
+-w{=<num>,cd=<id>,ce=<id>,e,x} 
+  =<num>          - set warning level number
+  cd=<id>         - disable warning message <id>
+  ce=<id>         - enable warning message <id>
+  e               - treat all warnings as errors
+  x               - set warning level to maximum setting
+-x                ignore INCLUDE environment variable
+-xd               disable exception handling (default)
+-xds              disable exception handling (table-driven destructors)
+-xdt              disable exception handling (same as -xd)
+-xr               enable RTTI
+-xs               enable exception handling
+-xss              enable exception handling (table-driven destructors)
+-xst              enable exception handling (direct calls for destruction)
+-xx               ignore default directories for file search (.,../h,../c,...)
+-za               disable extensions (i.e., accept only ISO/ANSI C++)
+-zam              disable all non-ISO compliant names (macros, symbols)
+-zastd=<standard> use specified ISO C++ language standard (c++98,c++0x)
+-zat              disable alternative tokens (e.g. and, or, not)
+-zc               place const data into the code segment
+-zdf              DS floats (i.e. not fixed to DGROUP)
+-zdl              load DS directly from DGROUP
+-zdp              DS is pegged to DGROUP
+-ze               enable extensions (i.e., near, far, export, etc.)
+-zf               scope of for loop initializer extends beyond loop
+-zff              FS floats (i.e. not fixed to a segment)
+-zfp              FS is pegged to a segment
+-zfw              generate FWAIT instructions
+-zg               generate function prototypes using base types
+-zgf              GS floats (i.e. not fixed to a segment)
+-zgp              GS is pegged to a segment
+         Multi-byte/Unicode character support
+-zk{0,0u,1,2,l,u=<num>} 
+  0               - double-byte character support: Kanji
+  0u              - translate double-byte Kanji to Unicode
+  1               - double-byte character support: Chinese/Taiwanese
+  2               - double-byte character support: Korean
+  l               - double-byte character support: local installed language
+  u=<num>         - load Unicode translate table for specified code page
+-zl               remove default library information
+-zld              remove file dependency information
+-zlf              always generate default library information
+-zls              remove automatically inserted symbols
+-zm               emit functions in separate segments
+-zmf              emit functions in separate segments (near functions allowed)
+-zo               use exception-handling for a specific operating system
+-zp=<num>         pack structure members with alignment {1,2,4,8,16}
+-zpw              output warning when padding is added in a class
+-zq               operate quietly (display only error messages)
+-zri              inline floating point rounding calls
+-zro              omit floating point rounding calls (non ANSI)
+-zs               syntax check only
+-zt[=<num>]       far data threshold (i.e., larger objects go in far memory)
+-zu               SS != DGROUP (i.e., do not assume stack is in data segment)
+-zv               enable virtual function removal optimization
+-zw               generate code for Microsoft Windows
+-zz               remove "@size" from __stdcall names (10.0 compatible)
+/opt/watcom/binl64/wpp38601.int
+/opt/watcom/binl64/wpp386.sym
+/opt/watcom/binl64/wppaxp
+Open Watcom C++ Alpha AXP Optimizing Compiler
+Version 2.0 beta Jun  1 2026 05:44:47 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1989-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+Usage: wppaxp [options] file [options]
+Options:
+          ( '=' is always optional, i.e., -w4 -zp4 )
+         Make Dependency info
+-ad{[=<file>],bs,d[=<file>],fs,hp[=<file>],t[=<file>]} 
+  [=<file>]       - generate make style automatic dependency file
+  bs              - force path separators to '\' in auto-depend file
+  d[=<file>]      - specify first dependency in make style auto-depend file
+  fs              - force path separators to '/' in auto-depend file
+  hp[=<file>]     - specify default path for headers without one
+  t[=<file>]      - specify target in make style auto-depend file
+-as               assume short integers are aligned
+-b{c,d,g,m,r,w}   Application type
+  c               - build target is a console application
+  d               - build target is a dynamic link library (DLL)
+  g               - build target is a GUI application
+  m               - build target is a multi-thread environment
+  r               - build target uses DLL version of C/C++ run-time library
+  w               - build target is a default windowing application
+-bt[=<os>]        build target is operating system <os>
+         Debugging information
+-d{0,1,2,2i,2s,2t,3,3i,3s,b} 
+  0               - no debugging information
+  1               - line number debugging information
+  2               - symbolic debugging information
+  2i              - d2 and debug inlines; emit inlines as COMDATs
+  2s              - d2 and debug inlines; emit inlines as statics
+  2t              - d2 but without type names
+  3               - symbolic debugging information with unreferenced type names
+  3i              - d3 and debug inlines; emit inlines as COMDATs
+  3s              - d3 and debug inlines; emit inlines as statics
+  b               - generate browsing information
+-d<name>[=text]   same as #define name [text] before compilation
+-d+               allow extended -d macro definitions
+-e=<num>          set limit on number of error messages
+-ee               call epilogue hook routine
+-ef               use full path names in error messages
+-ei               force enum base type to use at least an int
+-em               force enum base type to use minimum integral type
+-en               emit routine names in the code segment
+-ep[=<num>]       call prologue hook routine with <num> stack bytes available
+-eq               do not display error messages (but still write to .err file)
+-er               do not recover from undefined symbol errors
+-ew               alternate error message formatting
+-fc=<file>        specify file of command lines to be batch processed
+         Precompiled Header Files (PCH)
+-fh{[=<file>],d,q[=<file>],r,w,we} 
+  [=<file>]       - use pre-compiled header (PCH) file
+  d               - store debug info for PCH once (DWARF only)
+  q[=<file>]      - do not display PCH activity warnings
+  r               - force compiler to read PCH (will never write)
+  w               - force compiler to write PCH (will never read)
+  we              - don't count PCH activity warnings (see -we option)
+-fi=<file>        force <file> to be included
+-fip[=<file>]     automatic inclusion of <file> instead of _preincl.h (default)
+-fo[=<file>]      set object or preprocessor output file name
+-fr[=<file>]      set error file name
+-ft               check for truncated versions of file names
+-fx               do not check for truncated versions of file names
+-fzh              do not automatically postfix include file names
+-fzs              do not automatically postfix source file names
+-h{c,d}           Debugging Information Format
+  c               - generate Codeview debugging information
+  d               - generate DWARF debugging information
+-i=<path>         add another include path
+-j                change char default from unsigned to signed
+-k                continue processing files (ignore errors)
+-nm=<file>        set module name
+         Optimization
+-o{a,b,c,d,e[=<num>],h,i,i+,k,l,l+,m,n,o,p,r,s,t,u,x,z} 
+  a               - relax aliasing constraints
+  b               - enable branch prediction
+  c               - disable <call followed by return> to <jump> optimization
+  d               - disable all optimizations
+  e[=<num>]       - expand user functions inline (<num> controls max size)
+  h               - enable expensive optimizations (longer compiles)
+  i               - expand intrinsic functions inline
+  i+              - enable maximum inlining depth
+  k               - include prologue/epilogue in flow graph
+  l               - enable loop optimizations
+  l+              - enable loop unrolling optimizations
+  m               - generate inline code for math functions
+  n               - allow numerically unstable optimizations
+  o               - continue compilation if low on memory
+  p               - generate consistent floating-point results
+  r               - reorder instructions for best pipeline usage
+  s               - favor code size over execution time in optimizations
+  t               - favor execution time over code size in optimizations
+  u               - all functions must have unique addresses
+  x               - equivalent to -obmiler -s
+  z               - NULL points to valid memory in the target environment
+         Preprocess source file
+-p{,c,e,l,w=<num>} 
+                  - preprocess source file
+  c               - preserve comments
+  e               - encrypt identifiers
+  l               - insert #line directives
+  w=<num>         - wrap output lines at <num> columns. Zero means no wrap.
+-pil              preprocessor ignores #line directives
+-pm               dump predefined macros to output
+-q                operate quietly (display only error messages)
+-s                remove stack overflow checks
+-si               generate calls to initialize local storage
+-t=<num>          set number of spaces in a tab stop
+-u[=<name>]       undefine macro name
+-v                output function declarations to .def file
+-vcap             VC++ compatibility: alloca allowed in argument lists
+         Warning control
+-w{=<num>,cd=<id>,ce=<id>,e,x} 
+  =<num>          - set warning level number
+  cd=<id>         - disable warning message <id>
+  ce=<id>         - enable warning message <id>
+  e               - treat all warnings as errors
+  x               - set warning level to maximum setting
+-x                ignore INCLUDE environment variable
+-xd               disable exception handling (default)
+-xds              disable exception handling (table-driven destructors)
+-xdt              disable exception handling (same as -xd)
+-xr               enable RTTI
+-xs               enable exception handling
+-xss              enable exception handling (table-driven destructors)
+-xst              enable exception handling (direct calls for destruction)
+-xx               ignore default directories for file search (.,../h,../c,...)
+-za               disable extensions (i.e., accept only ISO/ANSI C++)
+-zam              disable all non-ISO compliant names (macros, symbols)
+-zastd=<standard> use specified ISO C++ language standard (c++98,c++0x)
+-zat              disable alternative tokens (e.g. and, or, not)
+-ze               enable extensions (i.e., near, far, export, etc.)
+-zf               scope of for loop initializer extends beyond loop
+-zg               generate function prototypes using base types
+         Multi-byte/Unicode character support
+-zk{0,0u,1,2,l,u=<num>} 
+  0               - double-byte character support: Kanji
+  0u              - translate double-byte Kanji to Unicode
+  1               - double-byte character support: Chinese/Taiwanese
+  2               - double-byte character support: Korean
+  l               - double-byte character support: local installed language
+  u=<num>         - load Unicode translate table for specified code page
+-zl               remove default library information
+-zld              remove file dependency information
+-zlf              always generate default library information
+-zls              remove automatically inserted symbols
+-zm               emit functions in separate sections
+-zp=<num>         pack structure members with alignment {1,2,4,8,16}
+-zpw              output warning when padding is added in a class
+-zq               operate quietly (display only error messages)
+-zs               syntax check only
+-zv               enable virtual function removal optimization
+/opt/watcom/binl64/wppaxp01.int
+/opt/watcom/binl64/wppaxp.sym
+/opt/watcom/binl64/wppi8601.int
+/opt/watcom/binl64/wpp.sym
+/opt/watcom/binl64/wprof
+Usage: wprof [-option] [sample_file]
+  where option is one or more of
+    -DIP=dip_name
+    -?
+    -Help
+/opt/watcom/binl64/wprof.sym
+/opt/watcom/binl64/wrc
+Open Watcom Windows and OS/2 Resource Compiler
+Version 2.0 beta Jun  1 2026 05:46:05 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1993-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+/opt/watcom/binl64/wrc.sym
+/opt/watcom/binl64/wstrip
+Open Watcom Executable Strip Utility Version 2.0 beta Jun  1 2026 05:47:10 (64-bit)
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1988-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See https://github.com/open-watcom/open-watcom-v2#readme for details.
+
+Usage: wstrip [options] input_file [output_file] [info_file]
+
+    input_file:  executable file
+    output_file: optional output executable or '.'
+    info_file:   optional output debugging or resource information file
+                 or input debugging or resource information file
+
+Options:
+
+-? display this screen
+-a add information rather than delete information
+-b create backup file (.bak) for input executable
+-n don't print warning messages
+-q don't print informational messages
+-r process resource information rather than debugging information
+/opt/watcom/binl64/wstub.exe
+/opt/watcom/binl64/wstubq.exe
+/opt/watcom/binl64/wtouch
+no matching files found for (?)
