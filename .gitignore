@@ -4,6 +4,9 @@
 *.obj
 *.elf
 
+# Compiler errors
+*.err
+
 # Linker output
 *.ilk
 *.map

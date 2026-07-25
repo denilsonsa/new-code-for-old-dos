@@ -150,9 +150,10 @@ SUFFIX = .exe
 # Already defined by default in wmake.
 # .EXTENSIONS: .exe .obj .c
 
-all: hello.exe
+all: hello.exe exvideo.exe
 
 hello.exe: hello.obj hello2.obj
+exvideo.exe: exvideo.obj
 
 # Special macros:
 #   $$ represents the character "$"
@@ -181,6 +182,7 @@ hello.exe: hello.obj hello2.obj
 
 .obj.exe:
 	wlink NAME $^@ $(LFLAGS) FILE { $< }
+	@wc -c $^@
 
 help: .SYMBOLIC
 	# Page 144, section 10.39.1 echo command
