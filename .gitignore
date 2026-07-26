@@ -5,6 +5,7 @@
 *.elf
 
 # Disassembled object files
+*.lst
 *.s
 
 # Compiler errors

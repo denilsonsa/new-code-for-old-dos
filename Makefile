@@ -27,7 +27,7 @@
 # wpp386  Open Watcom C++ x86 32-bit Optimizing Compiler
 # wstrip  Open Watcom Executable Strip Utility
 
-# `wcc '?'` (only the relevant options)
+# wcc help (only the relevant options)
 #
 # -?              print this message
 # 
@@ -147,9 +147,19 @@
 #   o             - warn about problems with overlaid code
 #   x             - set warning level to maximum setting
  
+# wdis help (only the relevant options)
+#
+# -a          generate assembleable output
+# -e          generate lists of externs
+# -p          generate list of publics
+# -m          leave C++ names mangled
+#
+# -i=<char>   initial character of internal labels
+# -l[=<file>] generate listing file (.lst by default)
+# -s[=<file>] include source lines
 
 CC = wcc
-CFLAGS = -q -3 -fp3 -bt=dos -ml -d0 -ox
+CFLAGS = -q -3 -fp3 -bt=dos -ml -d3 -ox
 #LFLAGS = SYS dos OPTION STACK=8192
 LFLAGS = SYS dos OPTION QUIET
 
@@ -205,9 +215,11 @@ exvideo.exe: exvideo.obj
 	# > Open Watcom C/C++ compiles directly to object files,
 	# > so we need the disassembler to achieve a similar effect.
 	# https://open-watcom.github.io/open-watcom-v2-wikidocs/ctools.html#owcc_Options_Summary
-	wdis $^@ > $^*.s
+	wdis -e -p -s -l $^@
+	wdis -a -e -p -s -l=$^*.s $^@
 	# Adding a Vi modeline
-	echo vi:ts=8 >> $^*.s
+	echo // vi:ts=8 >> $^*.lst
+	echo \; vi:ts=8 >> $^*.s
 
 .obj.exe:
 	wlink NAME $^@ $(LFLAGS) FILE { $< }
@@ -221,6 +233,6 @@ help: .SYMBOLIC
 
 clean: .SYMBOLIC
 	rm -f hello.exe
-	rm -f *.obj *.err *.s
+	rm -f *.obj *.err *.s *.lst
 
 # vim:ft=make
