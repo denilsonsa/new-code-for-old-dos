@@ -158,8 +158,9 @@
 # -l[=<file>] generate listing file (.lst by default)
 # -s[=<file>] include source lines
 
-CC = wcc
-CFLAGS = -q -3 -fp3 -bt=dos -ml -d3 -ox
+DEBUGLEVEL = -d3
+
+CFLAGS = -q -3 -fp3 -bt=dos -ml $(DEBUGLEVEL) -ox
 #LFLAGS = SYS dos OPTION STACK=8192
 LFLAGS = SYS dos OPTION QUIET
 
@@ -209,7 +210,7 @@ exvideo.exe: exvideo.obj
 
 .c.obj:
 	rm -f $^*.err
-	$(CC) $(CFLAGS) -fo=$^@ $[@
+	wcc $(CFLAGS) -fo=$^@ $[@
 	# Generating a disassembly of the object code.
 	# This is equivalent to `gcc -S`.
 	# > Open Watcom C/C++ compiles directly to object files,
