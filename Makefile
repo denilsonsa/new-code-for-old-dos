@@ -4,6 +4,15 @@
 # Unix-compatible system.
 #
 # The idea is to use a modern (Linux) system to cross-compile to legacy DOS.
+#
+# Watcom's makefile is subtly different than GNU Make. Do not attempt to run
+# this under GNU make or other kinds of make, it will not work.
+#
+# See also:
+# * Example:     https://github.com/open-watcom/open-watcom-v2/blob/master/bld/src/goodies/makefile.c
+# * PDF docs:    https://open-watcom.github.io/open-watcom-v2-wikidocs/ctools.pdf
+# * HTML docs:   https://open-watcom.github.io/open-watcom-v2-wikidocs/ctools.html#The_Open_Watcom_Make_Utility
+# * Docs source: https://github.com/open-watcom/open-watcom-v2/blob/master/docs/doc/cmn/wmake.gml
 
 # wcc     Open Watcom C x86 16-bit Optimizing Compiler
 # wcc386  Open Watcom C x86 32-bit Optimizing Compiler
@@ -176,10 +185,29 @@ exvideo.exe: exvideo.obj
 #   "&" file name with path and extension removed
 #   "." file name with path removed
 #   ":" path of file name
+#
+# https://open-watcom.github.io/open-watcom-v2-wikidocs/ctools.html#Special_Macros
+# https://open-watcom.github.io/open-watcom-v2-wikidocs/ctools.html#Macros
+# https://open-watcom.github.io/open-watcom-v2-wikidocs/ctools.pdf
+#  '-> page 96, section 10.2.4 Special Macros
+#  '-> pages 119-120, section 10.33 Macros
+#
+# In summary:
+# $^* means the current target without the extension
+# $^@ means the current target with extension
+# $[@ means the first dependent with extension
 
 .c.obj:
 	rm -f $^*.err
 	$(CC) $(CFLAGS) -fo=$^@ $[@
+	# Generating a disassembly of the object code.
+	# This is equivalent to `gcc -S`.
+	# > Open Watcom C/C++ compiles directly to object files,
+	# > so we need the disassembler to achieve a similar effect.
+	# https://open-watcom.github.io/open-watcom-v2-wikidocs/ctools.html#owcc_Options_Summary
+	wdis $^@ > $^*.s
+	# Adding a Vi modeline
+	echo vi:ts=8 >> $^*.s
 
 .obj.exe:
 	wlink NAME $^@ $(LFLAGS) FILE { $< }
@@ -193,6 +221,6 @@ help: .SYMBOLIC
 
 clean: .SYMBOLIC
 	rm -f hello.exe
-	rm -f *.obj *.err
+	rm -f *.obj *.err *.s
 
 # vim:ft=make

@@ -4,6 +4,9 @@
 *.obj
 *.elf
 
+# Disassembled object files
+*.s
+
 # Compiler errors
 *.err
 
