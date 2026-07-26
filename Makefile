@@ -158,23 +158,6 @@
 # -l[=<file>] generate listing file (.lst by default)
 # -s[=<file>] include source lines
 
-DEBUGLEVEL = -d3
-
-CFLAGS = -q -3 -fp3 -bt=dos -ml $(DEBUGLEVEL) -ox
-#LFLAGS = SYS dos OPTION STACK=8192
-LFLAGS = SYS dos OPTION QUIET
-
-PLATFORM = 16
-SUFFIX = .exe
-
-# Already defined by default in wmake.
-# .EXTENSIONS: .exe .obj .c
-
-all: hello.exe exvideo.exe
-
-hello.exe: hello.obj hello2.obj
-exvideo.exe: exvideo.obj
-
 # Special macros:
 #   $$ represents the character "$"
 #   $# represents the character "#"
@@ -208,6 +191,26 @@ exvideo.exe: exvideo.obj
 # $^@ means the current target with extension
 # $[@ means the first dependent with extension
 
+##########################################################################
+# End of docs. Start of the actual Makefile.
+
+DEBUGLEVEL = -d3
+
+CFLAGS = -q -3 -fp3 -bt=dos -ms $(DEBUGLEVEL) -ox
+#LFLAGS = SYS dos OPTION STACK=8192
+LFLAGS = SYS dos OPTION QUIET
+
+PLATFORM = 16
+SUFFIX = .exe
+
+# Already defined by default in wmake.
+# .EXTENSIONS: .exe .obj .c
+
+all: hello.exe exvideo.exe
+
+hello.exe: hello.obj hello2.obj
+exvideo.exe: exvideo.obj
+
 .c.obj:
 	rm -f $^*.err
 	wcc $(CFLAGS) -fo=$^@ $[@
@@ -233,7 +236,7 @@ help: .SYMBOLIC
 	@echo Hello! Someday there will be help here.
 
 clean: .SYMBOLIC
-	rm -f hello.exe
+	rm -f exvideo.exe hello.exe
 	rm -f *.obj *.err *.s *.lst
 
 # vim:ft=make
