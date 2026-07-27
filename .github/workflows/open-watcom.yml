@@ -1,0 +1,28 @@
+# https://github.com/open-watcom/setup-watcom
+
+name: Open Watcom cross-compiler to DOS
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+    - uses: open-watcom/setup-watcom@v1
+      with:
+        version: "2.0"
+        #tag: ""
+        target:  "dos"
+    - name: Make
+      run: |
+        wmake
+    - uses: actions/upload-artifact@v7
+      with:
+        name: DOS-binaries
+        path: '*.exe'
+        compression-level: 9
